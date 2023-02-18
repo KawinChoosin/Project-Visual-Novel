@@ -44,6 +44,7 @@ int main(){
             }
         }
     }while(true);
+    system("cls");
     answer = 0;
     cout << "----------------------------------\n";
     cout << "You've walk in to the woods and found a chest.\nThere is a keyhole on it.\nMaybe it would have something inside.\n";
