@@ -5,24 +5,27 @@ using namespace std;
 int main(){
     int answer;
     srand(time(0));
-    cout << "While you are traveling on your way, \nyou coincidently found a snake fighting a rat.\n";
     cout << "----------------------------------\n";
-    cout << "What would you do?\n";
+    cout << "While you are traveling on the way, \nyou coincidently found a snake fighting a rat.\n";
+    cout << "----------------------------------\n";
+    cout << "What would you do?\n\n";
     cout << "1) Fight the snake.\n\n2) Fight the rat.\n\n3) Runaway\n(Success rate 50%)\n";
     cout << "----------------------------------\n";
+    bool haveKey;
     do{
         cout << "Your answer: ";
         cin >> answer;
         cout << "----------------------------------\n";
         if(answer == 1){
             cout << "You fought the snake.\n";
-            cout << "The rat feel thank to you, he give you a key.\n";
+            cout << "The rat feels thank to you, he gives you a key.\n";
             cout << "----------------------------------\n";
+            haveKey = true;
             break;
         }
         if(answer == 2){
             cout << "You fought the rat.\n";
-            cout << "You loss the fight.\n";
+            cout << "You won the fight but then the snake attacks you.\n";
             cout << "Your lifepoint -1\n";
             cout << "----------------------------------\n";
             break;
@@ -40,10 +43,48 @@ int main(){
                 break;
             }
         }
-        else{
-            cout << "----------------------------------\n";
-            cout << "Invalid answer.\n";
-            cout << "----------------------------------\n";
-        } 
     }while(true);
+    answer = 0;
+    cout << "----------------------------------\n";
+    cout << "You've walk in to the woods and found a chest.\nThere is a keyhole on it.\nMaybe it would have something inside.\n";
+    cout << "----------------------------------\n";
+    cout << "What would you do?\n\n";
+    if(haveKey == false){
+        cout << "1) Try to break it.\n(Success rate 50%)\n\n2) Leave it.\n\n";
+    }else{
+        cout << "1) Try to break it.\n(Success rate 50%)\n\n2) Leave it.\n\n3) Unlock it by the key.\n\n";
+    }
+    cout << "----------------------------------\n";
+    do{
+        cout << "Your answer: ";
+        cin >> answer;
+        cout << "----------------------------------\n";
+        if(answer == 1){
+            int x = rand()%100 + 1;
+            if(x > 50){
+                cout << "You've tried to break it. It's broken down\nThere is a sword inside.\n";
+                cout << "You got a sword.\n";
+                cout << "----------------------------------\n";
+                break;
+            }else{
+                cout << "You tried to break it until your hand broke but it seems like nothing happen.\n";
+                cout << "You're life point -1.";
+                cout << "----------------------------------\n";
+                break;
+            }
+        }
+        if(answer == 2){
+            cout << "You left the chest.\n";
+            cout << "You continue the travel.\n";
+            cout << "----------------------------------\n";
+            break;
+        }
+        if(answer == 3 && haveKey == true){
+            cout << "You've unlocked it.\nThere is a sword inside.\n";
+            cout << "You got a sword.\n";
+            cout << "----------------------------------\n";
+            break;
+        }
+    }while(true);
+    answer = 0;
 }
