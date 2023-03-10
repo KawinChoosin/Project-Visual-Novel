@@ -4,11 +4,26 @@
 #include<cstdlib>
 using namespace std;
 
+void pressEnter(); // กด Enter เพื่อไปต่อ
+void playerLose(); // เมื่อแพ้
+void sideEventPeddler(int &, bool &, bool &, int &); // Function เจอพ่อค้า
+void Tavern(int &, int &, int &); // Function เจอโรงเตี๊ยม
+void FoundGirl(int &); // Function เจอเด็กหญิง
+void FoundWoman(int &); // Function เจอหญิงสาว
+
 void pressEnter(){ // กด Enter เปลี่ยนฉาก
     cout << "Press Enter to continue...";
     cin.get();
     system("cls");
 }
+
+void playerLose(){
+	cout << "*******************************************************\n";
+	cout << "*                                                     *\n";
+	cout << "*                   YOU LOSE!!!                       *\n";
+	cout << "*                                                     *\n";
+	cout << "*******************************************************\n";
+};
 
 void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion){ //เจอพ่อค้าเร่
     int answer;
@@ -87,7 +102,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
             }else{ //ถ้าเงินน้อยกว่า 30 มี aventurine กับ flourite จะมี 2 ตัวเลือก
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Will you accept the offer?" << "(Your coins: " << money << ")\n\n";
-                cout << "1) Convince the peddler for discount\n\n) Decline\n";
+                cout << "1) Convince the peddler for discount\n\n2) Decline\n";
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Your Choice: ";
                 cin >> answer;
@@ -360,12 +375,13 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
     pressEnter(); // กด enter เพื่อเปลี่ยนฉาก
 }
 
+
 void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊ยม
     int answer;
     while(true){
         system("cls");
         cout << "*****************************************************************\n";
-        cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 30 coins.\n\n";
+        cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
         cout << "Your coins: " << money << "\n";
         cout << "\n*****************************************************************\n";
         if(money >= 20){ // ถ้าเงินมากกว่าหรือเท่ากับ 20 จะมี 2 ตัวเลือก
@@ -381,7 +397,7 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
                 hp += 1;
                 cout << "*****************************************************************\n";
                 cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
-                cout << "You accept to rest in a tavern. Your coin -20. The\nroom was so comfortable, so you sleep very well. In the \nnext morning, you wake up freshly and ready to go on.\n";
+                cout << "You accept to rest in a tavern. Your coin -20. The\nroom is so comfortable, so you sleep very well. In the \nnext morning, you wake up freshly and ready to go on.\n";
                 cout << "\nYour coins: " << money << "(-20)\n";
                 if(hp < maxhp) cout << "Your HP: " << hp << "(+1)\n";
                 cout << "\nYou continue the journey.\n";
@@ -390,7 +406,7 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
             }else if(answer == 2){ // ถ้า decline พักใต้ต้นไม้แล้วเดินทางต่อ
                 system("cls");
                 cout << "*****************************************************************\n";
-                cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 30 coins.\n\n";
+                cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
                 cout << "You decline to rest in a tavern. So you walk all night and sleep under the tree that is not quite comfy.\n";
                 cout << "\nYou continue the journey in the morning.\n";
                 cout << "\n*****************************************************************\n";
@@ -406,7 +422,7 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
             if(answer == 1){ // บังคับ decline เพราะเงินไม่พอ
                 system("cls");
                 cout << "*****************************************************************\n";
-                cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 30 coins.\n\n";
+                cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
                 cout << "You don't have enough coins to rent a room,\nso you decline to rest in a tavern. You walk all night\nand sleep under the tree that is not quite comfy.\n";
                 cout << "\nYou continue the journey in the morning.\n";
                 cout << "\n*****************************************************************\n";
@@ -418,12 +434,13 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
     pressEnter(); // กด enter เพื่อเปลี่ยนฉาก
 }
 
-void FoundGirl(int &money){
+
+void FoundGirl(int &money){ // เจอเด็กสาว
     int answer;
     while(true){
         system("cls");
         cout << "*****************************************************************\n";
-        cout << "You found a girl whose cart gets stuck in the mud wants some help.\n\n";
+        cout << "While you are walking along the way, a girl approaches you \n\"My cart got stuck, my good man. Could you please give me a hand?\"\nshe says.\n";
         cout << "\n*****************************************************************\n";
         cout << "-----------------------------------------------------------------\n";
         cout << "What will you do?\n\n";
@@ -431,20 +448,57 @@ void FoundGirl(int &money){
         cout << "-----------------------------------------------------------------\n";
         cout << "Your Choice: ";
         cin >> answer;
-        if(answer == 1){
+        if(answer == 1){ // ช่วย เงิน +10
             system("cls");
             cout << "*****************************************************************\n";
-            cout << "You found a girl whose cart gets stuck in the mud wants some help.\n\n";
+            cout << "While you are walking along the way, a girl approaches you \n\"My cart got stuck, my good man. Could you please give me a hand?\"\nshe says.\n\n";
             cout << "You help the girl who is the daughter of some rich man in a village nearby.\nShe is really grateful to you, so she gives you some coins for helping her.\n";
             money += 10;
-            cout << "\nYour coins:" << money << "(+10)\n";
-            cout << "\n You continue your journey.";
+            cout << "\nYour coins: " << money << "(+10)\n";
+            cout << "\nYou continue your journey.\n";
             cout << "\n*****************************************************************\n";
             break;
-        }if(answer == 2){
+        }if(answer == 2){ // ไม่ช่วย เดินทางต่อ
             system("cls");
             cout << "*****************************************************************\n";
-            cout << "You found a girl whose cart gets stuck in the mud wants some help.\n\n";
+            cout << "While you are walking along the way, a girl approaches you \n\"My cart got stuck, my good man. Could you please give me a hand?\"\nshe says.\n\n";
+            cout << "You have too many things to do and don't want to waste you time, \nso you decide to ignore her and keep moving.\n";
+            cout << "\n*****************************************************************\n";
+            break;
+        }
+    }
+    cin.ignore();
+    pressEnter();
+}
+
+
+void FoundWoman(int &hp){ // เจอหญิงสาวขอความช่วยเหลือ
+    int answer;
+    while(true){
+        system("cls");
+        cout << "*****************************************************************\n";
+        cout << "While you are walking along the way, a woman approaches you \n\"My cart got stuck, my lord. Could you please give me a hand?\"\nshe says.\n";
+        cout << "\n*****************************************************************\n";
+        cout << "-----------------------------------------------------------------\n";
+        cout << "What will you do?\n\n";
+        cout << "1) Help the woman\n\n2) Ignore and keep going\n";
+        cout << "-----------------------------------------------------------------\n";
+        cout << "Your Choice: ";
+        cin >> answer;
+        if(answer == 1){ // ช่วย hp -1
+            system("cls");
+            cout << "*****************************************************************\n";
+            "While you are walking along the way, a woman approaches you \n\"My cart got stuck, my lord. Could you please give me a hand?\"\nshe says.\n";
+            cout << "You decide to help the woman. But when you are pushing the cart,\n\"Now!!\" she shout loudly. You see a group of bandits hiding\n in the sideways. You throw a rock to the front\n of the cart to distract them and run as fast as you can.\n Unfortunately you are injured by ambushing\n";
+
+            hp -= 1;
+            cout << "\nYour HP: " << hp << "(-1)\n";
+            cout << "\n*****************************************************************\n";
+            break;
+        }if(answer == 2){ // ไม่ช่วย เดินทางต่อ
+            system("cls");
+            cout << "*****************************************************************\n";
+            "While you are walking along the way, a woman approaches you \n\"My cart got stuck, my lord. Could you please give me a hand?\"\nshe says.\n";
             cout << "You have too many things to do and don't want to waste you time, \nso you decide to ignore her and keep moving.\n";
             cout << "\n*****************************************************************\n";
             break;
