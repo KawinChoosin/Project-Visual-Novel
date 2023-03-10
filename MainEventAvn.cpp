@@ -24,7 +24,7 @@ void Summary(int &con, bool &aventurine){
         cout << "\n   Aventurine Great for purification and opening the mind to\nnew possibilities, Aventurine can also boost creativity, calm the\nnerves before stressful situations, and ward off bad energies from\n\"psychic vampires\" in your life.\n";
         cout << "\n   A whole town of dwarves come out to send you to the city\ngates with a gratefulness.\n";
         cout << "\n*****************************************************************\n";
-        pressEnterAvn();
+        
     }
 }
 
@@ -76,6 +76,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                     cout << "\n   You already missed something.\n";
                     cout << "\n   You continue the journey.\n";
                     cout << ("\n*****************************************************************\n");
+                    cin.ignore();
                     break;
                 }
             }else if(answer == 2){
@@ -91,6 +92,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn.insert(dialogAvn.begin() + 3, "\n    You decided to cross it. At that moment, there was a strong\nwind blowing as you jumped. till you lose your balance Staggered into the\nfence of the bridge until it almost fell, but you were still\nable to hold onto the fence firmly in time. So you can cross safely. \n");
                     dialogOut;
                     con = 1;
+                    cin.ignore();
                     break;
                 }else if(answer == 2){
                     system("cls");
