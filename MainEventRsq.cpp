@@ -51,9 +51,15 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
         dialogRsq.push_back("\n1) Yes, I will.");
         dialogRsq.push_back("\n2) No, I will not.");
         dialogRsq.push_back("\n-----------------------------------------------------------------\n");
-        dialogRsq.push_back("Your Choice: ");
         dialogOut;
-        cin>>answer;
+        do{
+            cout<<"Your Choice: ";
+            cin>>answer;
+            if(answer != 1 && answer != 2){
+                cout<<"Wrong answer, Try again.\n";
+                continue;
+            }break;
+        }while(true);
         dialogRsq.clear();
         system("cls");
         if(answer==1){
@@ -64,38 +70,57 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
             dialogRsq.push_back
             ("\n*****************************************************************\n");
             dialogOut;
+            cin.ignore();
             pressEnterRsq();
             dialogRsq.insert(dialogRsq.begin()+2,
-            "\n   He gives you that vase and Rose Quartz, the \"Crystal of\n Forgiveness and Love\".\n\n");
-            system("cls");
+            "\n   He gives you that vase and Rose Quartz, the \"Crystal of\n Forgiveness and Love\".\n");
             dialogOut;
             rosequartz = true;
-            
+
+            pressEnterRsq();
             dialogRsq.insert(dialogRsq.begin()+3,
             " ----------------------------------------------------------\n|   Rose Quartz provides unconditional love and compassion |\n| for yourself and those closest to you. This healing stone|\n| helps you balance and find clarity and forgiveness in    |\n| your emotions.)                                          |\n ----------------------------------------------------------\n");
-            dialogRsq.insert(dialogRsq.begin()+4,"\n    Vase which is priceless\nThis vase is really beautiful \nYou left the store satisfied.");
-            vase=1;
-            system("cls");
             dialogOut;
             pressEnterRsq();
-            dialogRsq.insert(dialogRsq.begin()+5,"\n    *** LET\'S CONTINUE THE JOURNEY ! ***\n");
+            dialogRsq.insert(dialogRsq.begin()+4,"\n    Vase which is priceless\n   This vase is really beautiful \n    You left the store satisfied.\n");
+            vase=1;
+            dialogOut;
+            dialogRsq.clear();
+            pressEnterRsq();
+            cout<<("*****************************************************************\n");
+            cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
+            cout<<("*****************************************************************\n");
+            dialogOut;
+            
             break;
             
         }else if(answer==2){
             dialogRsq.push_back
             ("*****************************************************************\n");
             dialogRsq.push_back
-            ("He was quite disappointed. He also did not sell you a \nvase, and you have to pay the entrance fee. So you left\nthe store dejected.\n");
+            ("     He was quite disappointed. He also did not sell you a \nvase, and you have to pay the entrance fee. So you left\nthe store dejected.\n");
             dialogRsq.push_back
             ("\n*****************************************************************\n"); 
-            money-=15;
             dialogOut;
-            cout<<"\nYou lose 15 coins \nYour coins: "<<money<<"(-15)\n";
+            money-=15;
             cin.ignore();
+            pressEnterRsq();
+            cout<<"-----------------------------------------\n";
+            cout<<"\nYou lose 15 coins \nYour coins: "<<money<<"  (-15)\n";
+            cout<<"-----------------------------------------\n";
+            pressEnterRsq();
+            cout<<("*****************************************************************\n");
+            cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
+            cout<<("*****************************************************************\n");
             break;
         }
-    
+            
     }
     pressEnterRsq();
 }
+int main(){
+    int hp,money;
+    bool rosequartz,vase;
+    Rsq(hp,money,rosequartz,vase);
 
+}
