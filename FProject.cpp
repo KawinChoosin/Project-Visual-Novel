@@ -5,6 +5,8 @@
 #include"Opening.cpp"
 #include"SideEvent.cpp"
 #include"MainEventAvn.cpp"
+#include"MainEventRsq.cpp"
+#include"MainEventSdl.cpp"
 using namespace std;
 
 #define hpcheck if(hp <= 0) playerLose();pressEnter();return 0;
@@ -19,6 +21,7 @@ int main(){
         int maxhp = 1; // ค่า maxhp
         int hp = 5; // ค่า hp
         int potion = 0;
+        int vase = 0;
         Opening();
         Avn(hp, money, aventurine);
         hpcheck;

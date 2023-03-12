@@ -1,6 +1,8 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<cstdlib>
+#include<ctime>
 using namespace std;
 
 #define dialogOut for(auto i = dialogSdl.begin(); i != dialogSdl.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
@@ -52,47 +54,99 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
             dialogSdl.push_back("1) Yes.\n");
             dialogSdl.push_back("2) No.\n");
             dialogSdl.push_back("-----------------------------------------------------------------\n");
-            dialogSdl.push_back("Your Choice: ");
             dialogOut;
-            cin>>answer;
+            do{
+                cout<<"Your Choice: ";
+                cin>>answer;
+                if(answer!=1&&answer!=2){
+                    cout<<"Wrong answer, Try again.";
+                    continue;
+                }break;
+            }while(true);
             system("cls");
             if(answer==1){
                 dialogSdl.erase(dialogSdl.begin()+5,dialogSdl.begin()+8);
                 dialogSdl.insert(dialogSdl.begin()+5, "How much will you bid?\n");
-                dialogSdl.erase(dialogSdl.begin()+7);
                 dialogOut;
                 do{
                     cout<<"How much: ";
                     cin>>bidding;
-                    if(bidding<money){
+                    if(bidding>money){
                         cout<<"You dont have enough coin.\n";
                         continue;
-                    }
-                }while(bidding > money);
-                int x=49;
+                    }break;
+                }while(true);
+                int x=rand()%100+1;
                 if(x<=50) cut=1;
                 else if(x>50) cut=0;
                 if(cut==1){
                     dialogSdl.clear();
                     system("cls");
                     dialogSdl.push_back("-----------------------------------------------------------------\n");
-                    dialogSdl.push_back("\nSomeone cut more money than you have\n");
+                    dialogSdl.push_back("\n             Someone cut more money than you have\n");
                     dialogSdl.push_back("\n-----------------------------------------------------------------\n");
+                    dialogOut;
                     if(vase==1){
+                        cin.ignore();
+                        pressEnterSdl();
                         dialogSdl.push_back("\n*****************************************************************\n");
                         dialogSdl.push_back("     Unfortunately, You have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
                         dialogSdl.push_back("\n*****************************************************************\n");
                         dialogOut;
-                        cin.ignore();
                         pressEnterSdl();
                         dialogSdl.insert(dialogSdl.begin()+5,"\n     You win the bid this time.\nYou get a Sodalite, the \"Crystal of Logic\"\n");
-                        
                         dialogSdl.push_back(
                         "--------------------------------------------------\n|Sodalite boost your intuition self-expression   |\n|and to calm oversensitivity, open your mind     |\n|and using you wisdom.                           |\n--------------------------------------------------\n");
+                        dialogOut;
+                        pressEnterSdl();
+                        dialogSdl.clear();
+                        dialogSdl.push_back("\n*****************************************************************\n");
+                        dialogSdl.push_back
+                        ("  The vase you\'ve got from Mark Clay\'s help you win the\nauction because it is priceless. Valkyrie also likes\nthis artwork but he couldn't own it in the past.\nSo, you get Sodalite and you get another bonus.\n");
+                        dialogSdl.push_back("\n*****************************************************************\n");
+                        money+=15;
+                        cout<<"---------------------------------------------------";
+                        cout<<"\nYou got 15 coins \nYour coins: "<<money<<"(+15)\n";
+                        cout<<"---------------------------------------------------\n";
+                        dialogSdl.push_back("\n*****************************************************************\n");
+                        pressEnterSdl();
+                        dialogOut;
+                        system("cls");
 
+                    }else if(vase==0){
+                        cin.ignore();
+                        pressEnterSdl();
+                        dialogSdl.push_back("*****************************************************************\n");
+                        dialogSdl.push_back
+                        ("      If that's not enough you won't get this crystal.\n");
+                        dialogSdl.push_back("\n*****************************************************************\n");
+                        dialogSdl.insert(dialogSdl.begin()+5,
+                        "   \nUnfortunately, you lost the bid this time. And the one who\ngot this Sodalite gem was the son of the nobleman of this city.\nIt seemed that she would really like this gem and wouldn't\nlet anyone but her own it anymore.\n");
+                        pressEnterSdl();
+                        dialogOut;
                     }
+                }else if(cut==0){
+                    dialogSdl.clear();
+                    system("cls");
+                    dialogSdl.push_back("*****************************************************************");
+                    dialogSdl.push_back("\n     You win the bid this time.\nYou get a Sodalite, the \"Crystal of Logic\"\n");
+                    dialogSdl.push_back("\n*****************************************************************\n");
+                    dialogOut;
+                    cin.ignore();
+                    pressEnterSdl();
+                    dialogSdl.insert(dialogSdl.begin()+2,
+                    "\n ------------------------------------------------ \n|Sodalite boost your intuition self-expression   |\n|and to calm oversensitivity, open your mind     |\n|and using you wisdom.                           |\n ------------------------------------------------ \n");
+                    dialogOut;
+                    money+=15;
+                    pressEnterSdl();
+                    cout<<"---------------------------------------------------";
+                    cout<<"\nYou got 15 coins \nYour coins: "<<money<<"(+15)\n";
+                    cout<<"---------------------------------------------------\n";
+                    pressEnterSdl();
+        
                 }
-                break;
+               }else if(answer==2){
+                
                }
            }
     }
