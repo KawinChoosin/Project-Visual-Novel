@@ -13,6 +13,7 @@ int main(){
     srand(time(NULL));
     while(true){
         bool aventurine, quartz, sodalite, fluorite, tourmaline, howlite, amethyst; // เช็คชนิดของคริสตัล
+        bool vase;
         int gems = 0; // จำนวนของหินที่เก็บได้แล้ว
         int money = 60; // ค่าเงิน
         int maxhp = 1; // ค่า maxhp

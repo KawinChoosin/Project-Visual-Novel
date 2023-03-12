@@ -15,7 +15,7 @@ void pressEnterRsq(){
     system("cls");
 }
 
-void Rsq(int &hp, int &money, bool &rosequartz){
+void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
     int answer, con;
     while(true){
         system("cls");
@@ -73,20 +73,29 @@ void Rsq(int &hp, int &money, bool &rosequartz){
             
             dialogRsq.insert(dialogRsq.begin()+3,
             " ----------------------------------------------------------\n|   Rose Quartz provides unconditional love and compassion |\n| for yourself and those closest to you. This healing stone|\n| helps you balance and find clarity and forgiveness in    |\n| your emotions.)                                          |\n ----------------------------------------------------------\n");
+            dialogRsq.insert(dialogRsq.begin()+4,"\n    Vase which is priceless\nThis vase is really beautiful \nYou left the store satisfied.");
+            vase=1;
             system("cls");
             dialogOut;
+            pressEnterRsq();
+            dialogRsq.insert(dialogRsq.begin()+5,"\n    *** LET\'S CONTINUE THE JOURNEY ! ***\n");
             break;
             
-
-            
+        }else if(answer==2){
+            dialogRsq.push_back
+            ("*****************************************************************\n");
+            dialogRsq.push_back
+            ("He was quite disappointed. He also did not sell you a \nvase, and you have to pay the entrance fee. So you left\nthe store dejected.\n");
+            dialogRsq.push_back
+            ("\n*****************************************************************\n"); 
+            money-=15;
+            dialogOut;
+            cout<<"\nYou lose 15 coins \nYour coins: "<<money<<"(-15)\n";
+            cin.ignore();
+            break;
         }
     
     }
     pressEnterRsq();
 }
 
-int main(){
-    int hp, money;
-    bool rosequartz;
-    Rsq(hp,money,rosequartz);
-}
