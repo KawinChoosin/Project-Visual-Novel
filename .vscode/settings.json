@@ -5,6 +5,7 @@
         "cstdlib": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "xmemory": "cpp"
     }
 }

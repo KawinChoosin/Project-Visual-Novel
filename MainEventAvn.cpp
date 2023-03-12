@@ -16,6 +16,12 @@ void pressEnterAvn(){ // กด Enter เปลี่ยนฉาก
 void Summary(int &con, bool &aventurine){
     system("cls");
     aventurine = true;
+    if(aventurine==1){
+        cout<<"-----------------------------------------\n";
+        cout<<"YOU GOT A FIRST CLUE LETTER \'N\'\n";
+        cout<<"-----------------------------------------\n";
+        }
+        pressEnterAvn();
     if(con == 1){
         cout << "*****************************************************************\n";
         cout << "   Within this city there are very beautiful old houses. There\nis a nature of trees that are lush green. It goes well with\ntraditional houses built of stone, merging with streams and small roads.\n";
@@ -198,4 +204,10 @@ void Avn(int &hp, int &money, bool &aventurine){
     }
     pressEnterAvn();
     Summary(con, aventurine);
+}
+
+int main(){
+    int hp,money;
+    bool aventurine;
+    Avn(hp,money,aventurine);
 }

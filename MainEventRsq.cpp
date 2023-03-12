@@ -83,13 +83,10 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
             dialogOut;
             pressEnterRsq();
             dialogRsq.insert(dialogRsq.begin()+4,"\n    Vase which is priceless\n   This vase is really beautiful \n    You left the store satisfied.\n");
-            vase=1;
+            vase=1;//vase++
             dialogOut;
             dialogRsq.clear();
             pressEnterRsq();
-            cout<<("*****************************************************************\n");
-            cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
-            cout<<("*****************************************************************\n");
             dialogOut;
             
             break;
@@ -109,13 +106,20 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
             cout<<"\nYou lose 15 coins \nYour coins: "<<money<<"  (-15)\n";
             cout<<"-----------------------------------------\n";
             pressEnterRsq();
-            cout<<("*****************************************************************\n");
-            cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
-            cout<<("*****************************************************************\n");
+            
             break;
         }
             
     }
+    if(rosequartz==1){
+        cout<<"-----------------------------------------\n";
+        cout<<"YOU GOT A SECOND CLUE LETTER \'N\'\n";
+        cout<<"-----------------------------------------\n";
+    }
+    pressEnterRsq();
+    cout<<("\n*****************************************************************\n");
+    cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
+    cout<<("*****************************************************************\n");
     pressEnterRsq();
 }
 int main(){
