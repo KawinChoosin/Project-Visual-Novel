@@ -21,7 +21,7 @@ vector<string> dialogAvn;
 vector<string> dialogAvn2;
 vector<string> dialogAvn3;
 
-void pressEnterAvn(){ // กด Enter เปลี่ยนฉาก
+void pressEnterAvn(){ // กด Enter เปลี่ยนฉาก.
     cout << "Press Enter to continue...";
     cin.get();
     system("cls");
