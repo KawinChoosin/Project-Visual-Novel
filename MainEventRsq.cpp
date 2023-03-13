@@ -117,3 +117,4 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
     cout<<("*****************************************************************\n");
     pressEnterRsq();
 }
+ 
