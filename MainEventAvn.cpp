@@ -15,7 +15,7 @@ using namespace std;
                         cout << c; \
                         this_thread::sleep_for(chrono::milliseconds(50)); \
                     } \
-                  } // #define ให้ cout dialog ออกมา
+                  } // #define ให้ cout dialog ออกมา.
 
 vector<string> dialogAvn;
 vector<string> dialogAvn2;
