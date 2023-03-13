@@ -102,29 +102,18 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
             money-=15;
             cin.ignore();
             pressEnterRsq();
-            cout<<"-----------------------------------------\n";
+            cout<<"-----------------------------------------";
             cout<<"\nYou lose 15 coins \nYour coins: "<<money<<"  (-15)\n";
             cout<<"-----------------------------------------\n";
-            pressEnterRsq();
             
             break;
         }
             
     }
-    if(rosequartz==1){
-        cout<<"-----------------------------------------\n";
-        cout<<"YOU GOT A SECOND CLUE LETTER \'N\'\n";
-        cout<<"-----------------------------------------\n";
-    }
+
     pressEnterRsq();
     cout<<("\n*****************************************************************\n");
     cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
     cout<<("*****************************************************************\n");
     pressEnterRsq();
-}
-int main(){
-    int hp,money;
-    bool rosequartz,vase;
-    Rsq(hp,money,rosequartz,vase);
-
 }

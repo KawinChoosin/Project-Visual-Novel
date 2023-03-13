@@ -18,7 +18,7 @@ void pressEnterSdl(){
 }
 
 void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
-    int answer, con;
+    int answer;
     while(true){
         system("cls");
         \
@@ -579,11 +579,6 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
     cout<<"\n****************************************************************************\n";
     
     pressEnterSdl();
-    if(sodalite==1){
-        cout<<"-----------------------------------------\n";
-        cout<<"YOU GOT A THIRD CLUE LETTER \'N\'\n";
-        cout<<"-----------------------------------------\n\n";
-    }
     cout<<("*****************************************************************\n");
     cout<<("\n              LET\'S CONTINUE THE JOURNEY ! \n\n");
     cout<<("*****************************************************************\n");
@@ -591,10 +586,12 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
 
 }
 
-
+//Tester//
 int main(){
-    int hp, money=10;
-    bool vase=1;
-    bool sodalite=1;
+    int hp,money;
+    bool sodalite,vase;
     Sdl(hp,money,sodalite,vase);
+    return 0;
 }
+
+

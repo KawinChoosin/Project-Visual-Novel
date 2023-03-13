@@ -14,7 +14,6 @@ void pressEnterAvn(){ // กด Enter เปลี่ยนฉาก
 }
 
 void Summary(int &con, bool &aventurine){
-    system("cls");
     aventurine = true;
     if(aventurine==1){
         cout<<"-----------------------------------------\n";
@@ -23,14 +22,14 @@ void Summary(int &con, bool &aventurine){
         }
         pressEnterAvn();
     if(con == 1){
-        cout << "*****************************************************************\n";
+        cout << "\n*****************************************************************\n";
         cout << "   Within this city there are very beautiful old houses. There\nis a nature of trees that are lush green. It goes well with\ntraditional houses built of stone, merging with streams and small roads.\n";
         cout << "\n   When the dwarfs knew that you could cross the bridge, they\nwere very happy. In the past, it was seen that the gap between\nbridges was very wide. But now it's not wide anymore because you\nbelieved in your power. You destroyed the spell and helped the\ndwarfs to come out of the city\n";
         cout << "\n   So they gave you an Aventurine, the \"Crystal of opportunity\".\n";
         cout << "\n   Aventurine Great for purification and opening the mind to\nnew possibilities, Aventurine can also boost creativity, calm the\nnerves before stressful situations, and ward off bad energies from\n\"psychic vampires\" in your life.\n";
         cout << "\n   A whole town of dwarves come out to send you to the city\ngates with a gratefulness.\n";
         cout << "\n*****************************************************************\n";
-        
+        pressEnterAvn();
     }
 }
 
@@ -206,8 +205,3 @@ void Avn(int &hp, int &money, bool &aventurine){
     Summary(con, aventurine);
 }
 
-int main(){
-    int hp,money;
-    bool aventurine;
-    Avn(hp,money,aventurine);
-}
