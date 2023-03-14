@@ -255,7 +255,6 @@ void largebreadshop(){
     dialogAmt.insert(dialogAmt.begin()+1,
     "             Large bread shop in the heart of the city\n");
     dialogOut;
-    cin.ignore();
     pressEnterAmt();
     dialogAmt.insert(dialogAmt.begin()+4,
     "   This bread shop is a famous shop in this city that anyone has\nto eat. There are many types of bread. From the whole wheat bread,\ncroissant and many others In the shop there is a table to\nsit as well. With the fragrance of a new baked bread overwhelming\nthroughout the shop.\n");
@@ -421,7 +420,6 @@ void teashop(){
     dialogAmt.insert(dialogAmt.begin()+1,
     "                Tea shop at the corner of the road\n");
     dialogOut;
-    cin.ignore();
     pressEnterAmt();
     dialogAmt.insert(dialogAmt.begin()+4,
     "   This tea shop is very quiet. Like an abandoned shop Looks\n mysterious Full of strange aura While you are walking around\nthe shop There was an old man walking out.\n");
