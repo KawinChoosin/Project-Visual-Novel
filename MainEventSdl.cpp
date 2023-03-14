@@ -585,4 +585,4 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
     pressEnterSdl();
 
 }
- 
+ //.
