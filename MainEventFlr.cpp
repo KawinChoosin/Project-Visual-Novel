@@ -240,14 +240,6 @@ void Flr(int &hp, int &money, bool &fluorite){
     pressEnterFlr();
 }
 
-//Tester//
-int main(){
-    srand(time(0));
-    int hp,money;
-    bool fluorite;
-    Flr(hp,money,fluorite);
-}
-
 
     
 
