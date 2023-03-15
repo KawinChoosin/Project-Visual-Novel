@@ -20,7 +20,7 @@ using namespace std;
 vector<string> dialogFlr;
 vector<string> dialogFlr2;
 vector<string> dialogFlr3;
-int win;
+bool win;
 
 void pressEnterFlr(){
     cout << "Press Enter to continue...";
@@ -30,7 +30,7 @@ void pressEnterFlr(){
 
 void Flr(int &hp, int &money, bool &fluorite){
     int answer;
-    int win;
+    bool win;
     while(true){
         system("cls");
         dialogFlr3.push_back("*****************************************************************\n");
@@ -146,8 +146,6 @@ void Flr(int &hp, int &money, bool &fluorite){
                 dialogOut2;
                 dialogFlr3.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city on your own\nis impossible because the city plan is complicated. You have to\nhire some disciples of the temple to help you leave the city.\n");
             }else if(answer==1){
-                win=0;
-                while(true){
                 int x=rand()%70+30;
                 int y=rand()%70+30;
                 system("cls");
@@ -160,20 +158,13 @@ void Flr(int &hp, int &money, bool &fluorite){
                 cout<<"Your Answer = ";
                 cin>>answer;
                 if(answer==x*y){
-                    win++;
-                    if(win==2){
-                        break;
-                    }
-                    cout<<"\nNice Try. Correct it one more time to win!";
-                    continue;
-
-                } 
-                if(answer!=x*y){
-                    break;
+                    win=1;
                 }
+                if(answer!=x*y){
+                    win=0;
                 }
                 pressEnterFlr();
-                if(win==2){
+                if(win==1){
                     dialogFlr.clear();
                     cout<<"------------------------------------------------------------------\n";
                     cout<<"CORRECT! YOU\'VE WON THE GAME.\n";
@@ -195,7 +186,7 @@ void Flr(int &hp, int &money, bool &fluorite){
                     dialogOut3;
                     dialogOutSlowFlr;
                     dialogOut2;
-                }else if(win==0 || win==1){
+                }else if(win==0){
                     cout<<"------------------------------------------------------------------\n";
                     cout<<"INCORRECT! YOU LOSE T^T.\n";
                     cout<<"------------------------------------------------------------------\n";
@@ -237,7 +228,7 @@ void Flr(int &hp, int &money, bool &fluorite){
             dialogOut2;
             pressEnterFlr();
             cout<<"========================================================\n";
-            cout<<"\nYOU ALREADY MISSED SOMETHING ...\n";
+            cout<<"\nYOU ALREADY MISSED SOMETHING ...\n"; 
             cout<<"\n========================================================\n";
 
 
@@ -251,31 +242,3 @@ void Flr(int &hp, int &money, bool &fluorite){
     cout<<("*****************************************************************\n");
     pressEnterFlr();
 }
-
-int main(){
-    int hp,money,win;
-    bool fluorite;
-    Flr(hp,money,fluorite);
-}
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
