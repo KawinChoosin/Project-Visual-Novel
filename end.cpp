@@ -110,7 +110,8 @@ void End(bool &g1,bool &g2,bool &g3,bool &g4,bool &g5){
                 }
             }
         }
-
+    }
+}
 
 
 
