@@ -236,7 +236,6 @@ void Flr(int &hp, int &money, bool &fluorite){
             dialogOutSlowFlr;
             
             hp-=1;//
-            hpcheckFlr;
             for (char c : "\nYou lose 1 hp.\n\nYour hp: ") {
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
@@ -246,7 +245,9 @@ void Flr(int &hp, int &money, bool &fluorite){
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
             }
+            
             dialogOut2;
+            hpcheckFlr;
             pressEnterFlr();
             cout<<"========================================================\n";
             cout<<"\nYOU ALREADY MISSED SOMETHING ...\n"; 
@@ -262,11 +263,5 @@ void Flr(int &hp, int &money, bool &fluorite){
     cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
     cout<<("*****************************************************************\n");
     pressEnterFlr();
-    f=true;
-}
 
-int main(){
-    int hp,money;
-    bool fluorite;
-    Flr(hp,money,fluorite);
 }
