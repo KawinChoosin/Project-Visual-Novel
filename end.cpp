@@ -3,7 +3,7 @@
 #include <chrono>
 #include <thread>
 #include <vector>
-
+//ffff
 using namespace std;
 
 #define dialogOutAvn for(auto i = dialogAvn.begin(); i != dialogAvn.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
