@@ -16,6 +16,25 @@ void largebreadshop();
 void hospital();
 void thiscityisfull();
 
+
+#define hpcheckAmt if(hp<=0){\
+    pressEnterAmt();\
+    playerLoseAmt();\
+    pressEnterAmt();\
+    break;\
+    }\
+
+#define moneycheckAmt if(money<0){\
+    money=0;\
+    }\
+
+void playerLoseAmt(){
+    cout << "*******************************************************\n";
+	cout << "*                                                     *\n";
+	cout << "*                   YOU LOSE!!!                       *\n";
+	cout << "*                                                     *\n";
+	cout << "*******************************************************\n";
+}
 void pressEnterAmt(){
     cout<<"Press Enter to continue...";
     cin.get();
@@ -152,7 +171,8 @@ void Amt(int &hp, int &money, bool &amethyst){
             dialogAmt.insert(dialogAmt.begin()+2,
             "\n   You have met with a snow storm. Even to hide under a tree ,\nBut was unable to endure the cold, so he was unconscious.\n");
             dialogOut;
-            hp-=2;
+            hp-=2;//
+            
             cout<<"-----------------------------------------\n";
             cout<<"You lose 2 hp.\nYour hp: "<<hp<<"  (-2)\n";
             cout<<"-----------------------------------------\n"; 
@@ -160,6 +180,7 @@ void Amt(int &hp, int &money, bool &amethyst){
             dialogAmt.insert(dialogAmt.begin()+3,
             "\n   Fortunately, the villagers walked past, so he took you into\nShangri-La, located in the midst of a large mountain at the top of\nthe snow throughout the year,\npeaceful, cool and friendly people.\n");
             dialogOut;
+            hpcheckAmt;
             dialogAmt.clear();
             thiscityisfull();
 
@@ -173,7 +194,6 @@ void Amt(int &hp, int &money, bool &amethyst){
     dialogAmt.push_back("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
     dialogAmt.push_back("*****************************************************************\n");
     dialogOut;
-
 }
 
 
@@ -195,7 +215,8 @@ void hospital(){
     "\n   The doctor told you that your body is normal, everything\nis nothing wrong. You should sleep a lot.\n");
     dialogOut;
     pressEnterAmt();
-    money-=15;
+    money-=15;//
+    moneycheckAmt;
     cout<<"-----------------------------------------\n";
     cout<<"You lose 15 coins \nYour coins: "<<money<<"  (-15)\n";
     cout<<"-----------------------------------------\n";
@@ -251,6 +272,7 @@ void hospital(){
 
 
 void largebreadshop(){
+    while(true){
     int hp,answer,money;
     dialogAmt.insert(dialogAmt.begin()+1,
     "             Large bread shop in the heart of the city\n");
@@ -295,7 +317,8 @@ void largebreadshop(){
    
     if(answer==1 || answer==2 || answer==3 || answer==4 || answer==5 || answer==6 || answer==7){
         dialogAmt.clear();
-        money-=5;
+        money-=5;//
+        moneycheckAmt;
 
         cout<<"-----------------------------------------\n";
         cout<<"\nYou lose 5 coins \nYour coins: "<<money<<"  (-5)\n";
@@ -309,7 +332,8 @@ void largebreadshop(){
         dialogAmt.push_back
         ("===================================================================\n");
         dialogOut;
-        hp-=1;
+        hp-=1;//
+        
         pressEnterAmt();
         cout<<"-------------------------------------------------------------------\n";
         cout<<"\'When the dark soul is out you lose 1 hp.\n";
@@ -318,6 +342,7 @@ void largebreadshop(){
         cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
         cout<<"-------------------------------------------------------------------\n";
         dialogAmt.clear();
+        hpcheckAmt;
      
         pressEnterAmt();
         dialogAmt.push_back
@@ -334,8 +359,6 @@ void largebreadshop(){
         pressEnterAmt();
         
 
-    }else if(answer==8){
-        
     }
 
         cout<<
@@ -344,12 +367,13 @@ void largebreadshop(){
         "\n    You walk out the store and feel a little bit exhausted.\nAnd continue your journey.\n";
         cout<<
         "\n*****************************************************************\n";
- 
-}
+    break;
+    }
             
-       
+}   
 
 void thiscityisfull(){
+    while(true){
     int answer;
     pressEnterAmt();
     dialogAmt.push_back
@@ -398,8 +422,8 @@ void thiscityisfull(){
             }else if(answer==3){
                 hospital();
             }
-
-
+    break;
+    }
 }
 
 
@@ -416,6 +440,7 @@ void thiscityisfull(){
 
 
 void teashop(){
+    while(true){
     int hp,answer;
     dialogAmt.insert(dialogAmt.begin()+1,
     "                Tea shop at the corner of the road\n");
@@ -468,9 +493,11 @@ void teashop(){
                     dialogOut;
                     cin.ignore();
                     pressEnterAmt();
-                    hp-=2;
+                    hp-=2;//
+                    
                     cout<<"-----------------------------------------\n";
                     cout<<"\nYou lose 2 hp.\nYour hp: "<<hp<<"  (-2)\n";cout<<"-----------------------------------------\n";
+                    hpcheckAmt;
                     pressEnterAmt();
                     dialogAmt.erase(dialogAmt.begin()+1);
                     dialogAmt.insert(dialogAmt.begin()+1,
@@ -505,11 +532,13 @@ void teashop(){
                         ("===================================================================\n");
                         dialogOut;
                     }
-                }
+                }break;
+}
 }
 
 
 void thefirstglass(){
+    while(true){
     int hp;
     dialogAmt.push_back
     ("*****************************************************************\n");
@@ -524,11 +553,13 @@ void thefirstglass(){
     "\n   The next glass is the treatment of wounds within your body.\nAnd the last glass is to increase your power.\n");
     dialogOut;
     pressEnterAmt();
-    hp+=1;
+    hp+=1;//
+    
     cout<<"-------------------------------------------------------------------\n";
     cout<<"\nYou lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
     cout<<"-------------------------------------------------------------------\n";
     pressEnterAmt();
+    hpcheckAmt;
     dialogAmt.clear();
     dialogAmt.push_back
     ("*****************************************************************\n");
@@ -553,11 +584,6 @@ void thefirstglass(){
     dialogAmt.push_back
     ("\n*****************************************************************\n");
     dialogOut;
+    break;
+    }
 }
-
-int main(){
-    int hp,money;
-    bool amethyst;
-    Amt(hp,money,amethyst);
-
-} 

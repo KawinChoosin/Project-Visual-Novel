@@ -17,6 +17,24 @@ using namespace std;
                     } \
                   } // #define ให้ cout dialog ออกมา
 
+#define hpcheckFlr if(hp<=0){\
+    pressEnterFlr();\
+    playerLoseFlr();\
+    pressEnterFlr();\
+    break;\
+    }\
+
+#define moneycheckFlr if(money<0){\
+    money=0;\
+    }\
+
+void playerLoseFlr(){
+    cout << "*******************************************************\n";
+	cout << "*                                                     *\n";
+	cout << "*                   YOU LOSE!!!                       *\n";
+	cout << "*                                                     *\n";
+	cout << "*******************************************************\n";
+}
 vector<string> dialogFlr;
 vector<string> dialogFlr2;
 vector<string> dialogFlr3;
@@ -133,7 +151,8 @@ void Flr(int &hp, int &money, bool &fluorite){
                 dialogFlr.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city on your own\nis impossible because the city plan is complicated. You have to\nhire some disciples of the temple to help you leave the city.\n");
                 dialogOut3;
                 dialogOutSlowFlr;
-                money-=5;
+                money-=5;//
+                moneycheckFlr;
                 for (char c : "You lose 5 coins \n\nYour coins: ") {
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));
@@ -196,7 +215,8 @@ void Flr(int &hp, int &money, bool &fluorite){
                     dialogFlr.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city\non your own is impossible because the city plan is complicated.\nYou have to hire some disciples of the temple to help\nyou leave the city.\n");
                     dialogOut3;
                     dialogOutSlowFlr;
-                    money-=5;
+                    money-=5;//
+                    moneycheckFlr;
                     for (char c : "\nYou lose 5 coins \n\nYour coins: ") {
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));
@@ -215,7 +235,8 @@ void Flr(int &hp, int &money, bool &fluorite){
             dialogOut3;
             dialogOutSlowFlr;
             
-            hp-=1;
+            hp-=1;//
+            hpcheckFlr;
             for (char c : "\nYou lose 1 hp.\n\nYour hp: ") {
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
@@ -241,4 +262,11 @@ void Flr(int &hp, int &money, bool &fluorite){
     cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
     cout<<("*****************************************************************\n");
     pressEnterFlr();
+    f=true;
+}
+
+int main(){
+    int hp,money;
+    bool fluorite;
+    Flr(hp,money,fluorite);
 }

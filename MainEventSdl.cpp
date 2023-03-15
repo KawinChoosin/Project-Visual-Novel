@@ -24,6 +24,25 @@ vector<string> dialogSdl3;
 int bidding;
 bool cut;
 
+#define hpcheckSdl if(hp<=0){\
+    pressEnterSdl();\
+    playerLoseSdl();\
+    pressEnterSdl();\
+    break;\
+    }\
+
+#define moneycheckSdl if(money<0){\
+    money=0;\
+    }\
+
+void playerLoseSdl(){
+    cout << "*******************************************************\n";
+	cout << "*                                                     *\n";
+	cout << "*                   YOU LOSE!!!                       *\n";
+	cout << "*                                                     *\n";
+	cout << "*******************************************************\n";
+}
+
 void pressEnterSdl(){
     cout<<"Press Enter to continue...";
     cin.get();
@@ -110,8 +129,10 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
             cin.ignore();
             pressEnterSdl();
             dialogOutSdl3;
-            money-=10;
-            hp-=1;
+            money-=10;//
+            moneycheckSdl;
+            hp-=1;//
+            
             for (char c : "\n    You lose 10 coins \n\n    Your coins: ") {
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
@@ -131,6 +152,7 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
                 this_thread::sleep_for(chrono::milliseconds(50));
             }
             dialogOutSdl2;
+            hpcheckSdl;
             pressEnterSdl();
             cout<<"*****************************************************************\n";
             for (char c : "    In the morning, when you wake up, you feel tired, lack of sleep,\n dark eyes and exhausted. Then you leave   the inn and go out the door.\n ") {
@@ -148,7 +170,7 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
             pressEnterSdl();
             dialogOutSdl3;
             dialogOutSlowSdl;
-            hp-=1;
+            hp-=1;//
             for (char c : "\n    You lose 1 hp \n\n    Your hp: ") {
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
@@ -158,6 +180,7 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
             }
+            hpcheckSdl;
             pressEnterSdl();
             cout<<"*****************************************************************\n";
             for (char c : "    In the morning, when you wake up, you feel tired, lack of sleep,\n dark eyes and exhausted. Then you leave   the inn and go out the door.\n ") {
@@ -255,7 +278,8 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                         pressEnterSdl();
                         dialogSdl.clear();
                         dialogSdl.push_back("\n    The vase you\'ve got from Mark Clay\'s help you win the\nauction because it is priceless. Valkyrie also likes\nthis artwork but he couldn't own it in the past.\nSo, you get Sodalite and you get another bonus.\n");
-                        money+=15;
+                        money+=15;//
+                        moneycheckSdl;
                         dialogOutSdl3;
                         dialogOutSlowSdl;
                         for (char c : "\n    You get 15 coins \n\n    Your coins: ") {
@@ -285,7 +309,8 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                     dialogSdl2.insert(dialogSdl2.begin(), "\n ------------------------------------------------ \n|Sodalite boost your intuition self-expression   |\n|and to calm oversensitivity, open your mind     |\n|and using you wisdom.                           |\n ------------------------------------------------ \n");
                     dialogOutSdl3;
                     dialogOutSlowSdl;
-                    money+=15;
+                    money+=15;//
+                    moneycheckSdl;
                     for (char c : "\n    You get 15 coins\n\n    Your coins: ") {
                         cout << c;
                         this_thread::sleep_for(chrono::milliseconds(50));
@@ -356,7 +381,8 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                             pressEnterSdl();
                             dialogSdl.clear();
                             dialogSdl.push_back("\n    The vase you\'ve got from Mark Clay\'s help you win the\nauction because it is priceless. Valkyrie also likes\nthis artwork but he couldn't own it in the past.\nSo, you get Sodalite and you get another bonus.\n");
-                            money+=15;
+                            money+=15;//
+                            moneycheckSdl;
                             dialogOutSdl3;
                             dialogOutSlowSdl;
                             for (char c : "\n    You get 15 coins \n\n    Your coins: ") {
@@ -386,7 +412,8 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                         dialogSdl2.insert(dialogSdl2.begin(), "\n ------------------------------------------------ \n|Sodalite boost your intuition self-expression   |\n|and to calm oversensitivity, open your mind     |\n|and using you wisdom.                           |\n ------------------------------------------------ \n");
                         dialogOutSdl3;
                         dialogOutSlowSdl;
-                        money+=15;
+                        money+=15;//
+                        moneycheckSdl;
                         for (char c : "\n    You get 15 coins\n\n    Your coins: ") {
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));

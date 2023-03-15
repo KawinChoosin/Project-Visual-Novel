@@ -6,6 +6,7 @@
 using namespace std;
 
 
+
 void wizard(int &, int&, bool &, bool &, bool &, bool &, bool &); //มอน wizard (ทุกเมือง)
 void orc(int &, int&, bool &, bool &, bool &, bool &, bool &); //มอน orc (ยกเว้นเมืองแรก)
 void werewolf(int &, int &, bool &, bool &, bool &, bool &, bool &); //มอน werewolf (ตั้งแต่เมือง2+)
@@ -24,13 +25,26 @@ void pressEnterM(){ // กด Enter เปลี่ยนฉาก
     system("cls");
 }
 
-void playerLose(){
-	cout << "*******************************************************\n";
+
+#define hpcheckM if(hp<=0){\
+    pressEnterRsq();\
+    playerLoseRsq();\
+    pressEnterRsq();\
+    break;\
+    }\
+
+#define moneycheckM if(money<0){\
+    money=0;\
+    }\
+
+void playerLoseM(){
+    cout << "*******************************************************\n";
 	cout << "*                                                     *\n";
 	cout << "*                   YOU LOSE!!!                       *\n";
 	cout << "*                                                     *\n";
 	cout << "*******************************************************\n";
-};
+}
+
 
 void checkstone(int &stone, bool &aventurine, bool &rosequartz, bool &sodalite, bool &fluorite, bool &amethyst){
     stone=0;
@@ -116,6 +130,7 @@ void skeletons(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &so
                     cout<<"-----------------------------------------\n";
                     cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
                     cout<<"-----------------------------------------\n";
+                    hpcheckM;
                 }
             }else if(answer==2){ //escape
                 bool escape;
@@ -139,9 +154,12 @@ void skeletons(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &so
                 pressEnterM();
                 
                 hp-=1;//
+                
+
                 cout<<"-----------------------------------------\n";
                 cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
                 cout<<"-----------------------------------------\n";
+                hpcheckM;
             }else{
                 dialogM.insert(dialogM.begin()+4,
                 "   You starting to escape but suddenly skeleton\'s arrow shot you in\nthe legs. So you can't move at all!\n");
@@ -154,6 +172,7 @@ void skeletons(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &so
                 cout<<"-----------------------------------------\n";
                 cout<<"You lose 2 hp.\nYour hp: "<<hp<<"  (-2)\n";
                 cout<<"-----------------------------------------\n";
+                hpcheckM;
             }
     }break;
     
@@ -223,7 +242,8 @@ void bandit(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodal
                     dialogOut;
                     cin.ignore();
                     pressEnterM();
-                    money-=10;
+                    money-=10;//
+                    moneycheckM;
                     cout<<"-----------------------------------------\n";
                     cout<<"You lose 10 coins.\nYour coins: "<<money<<"  (-10)\n";
                     cout<<"-----------------------------------------\n";
@@ -255,10 +275,12 @@ void bandit(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodal
                     dialogOut;
                     cin.ignore();
                     pressEnterM();
-                    hp-=1;
+                    hp-=1;//
+                    
                     cout<<"-----------------------------------------\n";
                     cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
                     cout<<"-----------------------------------------\n";
+                    hpcheckM;
                 }
             }break;
 
@@ -338,10 +360,12 @@ void werewolf(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sod
                 dialogOut;
                 cin.ignore();
                 pressEnterM();
-                    hp-=1;
+                    hp-=1;//
+                    
             cout<<"-----------------------------------------\n";
             cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
         }
     }else if(answer==2){ //Fight
         bool fight;
@@ -361,6 +385,7 @@ void werewolf(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sod
             cin.ignore();
             pressEnterM();
             money+=10;
+            moneycheckM;
             cout<<"-----------------------------------------\n";
             cout<<"You got 10 coins \nYour coins: "<<money<<"  (+10)\n";
             cout<<"-----------------------------------------\n";
@@ -374,10 +399,11 @@ void werewolf(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sod
             dialogOut;
             cin.ignore();
             pressEnterM();
-            hp-=2;
+            hp-=2;//
             cout<<"-----------------------------------------\n";
             cout<<"You lose 2 hp.\nYour hp: "<<hp<<"  (-2)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
         }
     }else if(answer==3){ //unlock another option
     amethyst=0;
@@ -391,7 +417,8 @@ void werewolf(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sod
             "\nThe man thanks you for your help and gives you some of his money.\n");
             dialogOut;
             pressEnterM();
-            money+=15;
+            money+=15;//
+            moneycheckM;
             cout<<"-----------------------------------------\n";
             cout<<"You got 15 coins \nYour coins: "<<money<<"  (+15)\n";
             cout<<"-----------------------------------------\n";
@@ -479,10 +506,11 @@ void orc(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodalite
                 dialogOut;
                 cin.ignore();
                 pressEnterM();
-                    hp-=1;
+                    hp-=1;//
             cout<<"-----------------------------------------\n";
             cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
         }
     }else if(answer==2){ //Fight
         bool fight;
@@ -504,10 +532,11 @@ void orc(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodalite
             dialogOut;
             cin.ignore();
             pressEnterM();
-            hp-=1;
+            hp-=1;//
             cout<<"-----------------------------------------\n";
             cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
         }
     }else if(answer==3){ //Negotiate
         bool negotiate;
@@ -533,7 +562,8 @@ void orc(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodalite
             pressEnterM();
             dialogM.insert(dialogM.begin()+6,
             "\nThe villagers gives you some of their money to thanks for your help.\n");
-            money+=30;
+            money+=30;//
+            moneycheckM;
             dialogOut;
             cout<<"-----------------------------------------\n";
             cout<<"You got 30 coins \nYour coins: "<<money<<"  (+30)\n";
@@ -546,10 +576,11 @@ void orc(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodalite
             dialogOut;
             cin.ignore();
             pressEnterM();
-            hp-=1;
+            hp-=1;//
             cout<<"-----------------------------------------\n";
             cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
         }
     
     }break;
@@ -630,10 +661,11 @@ void wizard(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodal
             dialogOut;
             cin.ignore();
             pressEnterM();
-            hp-=1;
+            hp-=1;//
             cout<<"-----------------------------------------\n";
             cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
         }
     }else if(answer==2){ //Fight
         bool fight;
@@ -661,10 +693,11 @@ void wizard(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodal
             dialogOut;
             cin.ignore();
             pressEnterM();
-            hp-=1;
+            hp-=1;//
             cout<<"-----------------------------------------\n";
             cout<<"You lose 1 hp.\nYour hp: "<<hp<<"  (-1)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
         }
     }else if(answer==3){ //Cast a spell
         bool cast;
@@ -689,13 +722,15 @@ void wizard(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodal
             dialogOut;
             cin.ignore();
             pressEnterM();
-            hp+=1;
-            money+=20;
+            hp+=1;//
+            money+=20;//
+            moneycheckM;
             cout<<"-----------------------------------------\n";
             cout<<"You got 20 coins \nYour coins: "<<money<<"  (+20)\n";
             cout<<"-----------------------------------------\n";
             cout<<"You recover 2 hp.\nYour hp: "<<hp<<"  (+2)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
             
         }else{
             dialogM.insert(dialogM.begin()+5,
@@ -703,10 +738,11 @@ void wizard(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodal
             dialogOut;
             cin.ignore();
             pressEnterM();
-            hp-=2;
+            hp-=2;//
             cout<<"-----------------------------------------\n";
             cout<<"You lose 2 hp.\nYour hp: "<<hp<<"  (-2)\n";
             cout<<"-----------------------------------------\n";
+            hpcheckM;
 
         }
     }
