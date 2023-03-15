@@ -71,12 +71,13 @@ void Flr(int &hp, int &money, bool &fluorite){
             dialogFlr2.push_back("-------------------------------------------------------------------\n");
             dialogFlr2.push_back("WILL YOU GO WITH HIM?\n");
             dialogFlr2.push_back("1) YES.\n");
-            dialogFlr2.push_back("2) YES.\n");
+            dialogFlr2.push_back("2) NO.\n");
             dialogFlr2.push_back("-------------------------------------------------------------------\n");
             dialogFlr2.push_back("Your Choice: ");
             dialogOut3;
             dialogOutSlowFlr;
             dialogOut2;
+            cin>>answer;
             dialogFlr3.push_back("\n      You give him food. He eats it rapidly as soon as he receives it.\nWhen he finishes eating, he invites you to the city.\n");
             do{
                 cin>>answer;
@@ -87,19 +88,20 @@ void Flr(int &hp, int &money, bool &fluorite){
             system("cls");
             dialogFlr.clear();
             dialogFlr2.erase(dialogFlr2.begin() + 1, dialogFlr2.end());
-            dialogFlr.push_back("\n      You accept the invitation. He leads you to a big cave by\npassing through many intersections, then finds\na hugewaterfall curtain.\n");
+            if(answer==1){
+            dialogFlr.push_back("\n      You accept the invitation. He leads you to a big cave by\npassing through many intersections, then finds a hugewaterfall curtain.\n");
             dialogOut3;
             dialogOutSlowFlr;
             dialogOut2;
-            dialogFlr3.push_back("\n      You accept the invitation. He leads you to a big cave by\npassing through many intersections, then finds\na hugewaterfall curtain.\n");
+            dialogFlr3.push_back("\n      You accept the invitation. He leads you to a big cave by\npassing through many intersections, then finds a hugewaterfall curtain.\n");
             pressEnterFlr();
             system("cls");
             dialogFlr.clear();
-            dialogFlr.push_back("\n     Through the curtain of the waterfall, the seemingly\nunconsciousman was purified into\na cleanand haloed man.\n");
+            dialogFlr.push_back("\n     Through the curtain of the waterfall, the seemingly\nunconsciousman was purified into a cleanand haloed man.\n");
             dialogOut3;
             dialogOutSlowFlr;
             dialogOut2;
-            dialogFlr3.push_back("\n     Through the curtain of the waterfall, the seemingly\nunconsciousman was purified into\na cleanand haloed man.\n");
+            dialogFlr3.push_back("\n     Through the curtain of the waterfall, the seemingly\nunconsciousman was purified into a cleanand haloed man.\n");
             pressEnterFlr();
             system("cls");
             dialogFlr.clear();
@@ -111,7 +113,7 @@ void Flr(int &hp, int &money, bool &fluorite){
             pressEnterFlr();
             system("cls");
             dialogFlr.clear();
-            dialogFlr.push_back("\n     The priest invites you to stay in the temple and provide you\nwith food. So then this morning, you wake up refreshed\nand see the beautiful and sylvan view of this temple.\nThe priest asks you to play \'Multiply Games\'.\n");
+            dialogFlr.push_back("\n     The priest invites you to stay in the temple and provide you\nwith food. So then this morning, you wake up refreshed and see\nthe beautiful and sylvan view of this temple. The priest asks\nyou to play \'Multiply Games\'.\n");
             dialogFlr2.push_back("-------------------------------------------------------------------\n");
             dialogFlr2.push_back("Do you want to play?\n");
             dialogFlr2.push_back("1) Yes.\n");
@@ -121,14 +123,14 @@ void Flr(int &hp, int &money, bool &fluorite){
             dialogOut3;
             dialogOutSlowFlr;
             dialogOut2;
-            dialogFlr3.push_back("\n     The priest invites you to stay in the temple and provide you\nwith food. So then this morning, you wake up refreshed\nand see the beautiful and sylvan view of this temple.\nThe priest asks you to play \'Multiply Games\'.\n");
+            dialogFlr3.push_back("\n     The priest invites you to stay in the temple and provide you\nwith food. So then this morning, you wake up refreshed and see\nthe beautiful and sylvan view of this temple. The priest asks\nyou to play \'Multiply Games\'.\n");
             cin>>answer;
             system("cls");
             dialogFlr2.erase(dialogFlr2.begin() + 1, dialogFlr2.end());
             if(answer==2){
                 pressEnterFlr();
                 dialogFlr.clear();
-                dialogFlr.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city\non your own is impossible because the city plan is complicated.\nYou have to hire some disciples of the temple to help\nyou leave the city.\n");
+                dialogFlr.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city on your own\nis impossible because the city plan is complicated. You have to\nhire some disciples of the temple to help you leave the city.\n");
                 dialogOut3;
                 dialogOutSlowFlr;
                 money-=5;
@@ -142,7 +144,7 @@ void Flr(int &hp, int &money, bool &fluorite){
                             this_thread::sleep_for(chrono::milliseconds(50));
                 }
                 dialogOut2;
-                dialogFlr3.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city\non your own is impossible because the city plan is complicated.\nYou have to hire some disciples of the temple to help\nyou leave the city.\n");
+                dialogFlr3.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city on your own\nis impossible because the city plan is complicated. You have to\nhire some disciples of the temple to help you leave the city.\n");
             }else if(answer==1){
                 int x=rand()%70+30;
                 int y=rand()%70+30;
@@ -170,13 +172,13 @@ void Flr(int &hp, int &money, bool &fluorite){
                     pressEnterFlr();
                     system("cls");
                     dialogFlr.push_back
-                    ("\n    The priest gave you an Fluorite , the \"Crystal of Logic\"\n");
+                    ("\n    The priest gave you an Fluorite , the \"Crystal of Logic\".\n");
                     fluorite=true; //Get Fluorite//
                     dialogOut3;
                     dialogOutSlowFlr;
                     dialogOut2;
-                    dialogFlr3.push_back
-                    ("\n    The priest gave you an Fluorite , the \"Crystal of Logic\"\n");
+                    /*dialogFlr3.push_back
+                    ("\n    The priest gave you an Fluorite , the \"Crystal of Logic\"\n");*/
                     pressEnterFlr();
                     system("cls");
                     dialogFlr.push_back("\n       Fluorite is used to clean out bad energies, encourage\npoliteness and intelligence.\n");
@@ -206,6 +208,7 @@ void Flr(int &hp, int &money, bool &fluorite){
                     }
                     dialogOut2;
                 }
+            }
             }
         }else if(answer==2){
             dialogFlr.push_back("\n     You declined his request. That hungry ugly guy hits you hard.\n");
