@@ -566,7 +566,7 @@ void thefirstglass(){
     dialogAmt.push_back(
     "   The old people have seen that in the future you will be very\n difficult. Therefore gives you an Amethyst,\nthe \"Crystal of Purity\".\n");
     dialogAmt.push_back
-    ("\n*****************************************************************\n");
+    ("\n*****************************************************************\n"); 
     dialogOut;
     pressEnterAmt();
     dialogAmt.push_back
