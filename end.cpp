@@ -22,7 +22,7 @@ vector<string> dialogAvn2;
 vector<string> dialogAvn3;
 
 void pressEnterEnd(){ // กด Enter เปลี่ยนฉาก.
-    cout << "Press Enter to continue....";
+    cout << "Press Enter to continue...";
     cin.get();
     system("cls");
 }
