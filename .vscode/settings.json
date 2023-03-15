@@ -5,11 +5,6 @@
         "cstdlib": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "xstring": "cpp",
-        "chrono": "cpp",
-        "format": "cpp",
-        "forward_list": "cpp",
-        "initializer_list": "cpp",
-        "xutility": "cpp"
+        "xstring": "cpp"
     }
 }
