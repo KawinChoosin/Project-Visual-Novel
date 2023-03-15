@@ -6,9 +6,9 @@
 
 using namespace std;
 
-#define dialogOut for(auto i = dialogAvn.begin(); i != dialogAvn.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
-#define dialogOut2 for(auto i = dialogAvn2.begin(); i != dialogAvn2.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
-#define dialogOut3 for(auto i = dialogAvn3.begin(); i != dialogAvn3.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutAvn for(auto i = dialogAvn.begin(); i != dialogAvn.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutAvn2 for(auto i = dialogAvn2.begin(); i != dialogAvn2.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutAvn3 for(auto i = dialogAvn3.begin(); i != dialogAvn3.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
 
 #define dialogOutSlowAvn for(auto i = dialogAvn.begin(); i != dialogAvn.end(); i++) { \
                       for (char c : *i) { \
@@ -28,11 +28,12 @@ void pressEnterAvn(){ // กด Enter เปลี่ยนฉาก.
 }
 
 void Summary(int &con, bool &aventurine){
-    system("cls");
-    dialogAvn.clear();
-    dialogAvn2.clear();
-    dialogAvn3.clear();
     if(con == 1){
+        pressEnterAvn();
+        system("cls");
+        dialogAvn.clear();
+        dialogAvn2.clear();
+        dialogAvn3.clear();
         aventurine = true;
         dialogAvn2.push_back("*****************************************************************\n");
         dialogAvn.push_back("   Within this city there are very beautiful old houses. There\nis a nature of trees that are lush green. It goes well with\ntraditional houses built of stone, merging with streams and small roads.\n");
@@ -42,11 +43,10 @@ void Summary(int &con, bool &aventurine){
         dialogAvn.push_back("\n   The Aventurine. Great for purification and opening the mind to\nnew possibilities, Aventurine can also boost creativity, calm the\nnerves before stressful situations, and ward off bad energies from\n\"psychic vampires\" in your life.\n");
         dialogAvn.push_back("\n   A whole town of dwarves come out to send you to the city\ngates with a gratefulness.\n");
         dialogAvn3.push_back("\n*****************************************************************\n");
-        dialogOut2;
+        dialogOutAvn2;
         dialogOutSlowAvn;
-        dialogOut3;
+        dialogOutAvn3;
     }
-    pressEnterAvn();
 }
 
 void Avn(int &hp, int &money, bool &aventurine){
@@ -55,37 +55,37 @@ void Avn(int &hp, int &money, bool &aventurine){
         system("cls");
         dialogAvn3.push_back("*****************************************************************\n");
         dialogAvn.push_back("   In the middle of the day when the sun is very strong. As you\nwalk on a bridge across a river in front of one of the city gates\nand find that three of the timbers of the bridge were broken.\nUnderneath there\'s an open-mouthed crocodile waiting just where you\nstand. A light breeze blew and made the bridge sway back and forth.\n");
-        dialogOut3;
-        dialogOutSlowAvn;
-        dialogAvn3.push_back("   In the middle of the day when the sun is very strong. As you\nwalk on a bridge across a river in front of one of the city gates\nand find that three of the timbers of the bridge were broken.\nUnderneath there\'s an open-mouthed crocodile waiting just where you\nstand. A light breeze blew and made the bridge sway back and forth.\n");
         dialogAvn2.push_back("\n*****************************************************************\n");
         dialogAvn2.push_back("-----------------------------------------------------------------\n");
         dialogAvn2.push_back("Do you think your legs are long enough to cross this gap of the bridge?\n\n");
         dialogAvn2.push_back("1) I think my legs are long enough to cross it for sure!\n\n2) I don't think my legs are long enough to cross it!\n");
         dialogAvn2.push_back("-----------------------------------------------------------------\n");
         dialogAvn2.push_back("Your Choice: ");
-        dialogOut2;
+        dialogOutAvn3;
+        dialogOutSlowAvn;
+        dialogOutAvn2;
+        dialogAvn3.push_back("   In the middle of the day when the sun is very strong. As you\nwalk on a bridge across a river in front of one of the city gates\nand find that three of the timbers of the bridge were broken.\nUnderneath there\'s an open-mouthed crocodile waiting just where you\nstand. A light breeze blew and made the bridge sway back and forth.\n");
         cin >> answer;
         if(answer == 1){
             system("cls");
             dialogAvn.clear();
             dialogAvn.push_back("\n   The river seemed to be flowing faster.\n");
-            dialogOut3;
+            dialogOutAvn3;
             dialogOutSlowAvn;
             dialogAvn3.insert(dialogAvn3.begin() + 2, "\n   The river seemed to be flowing faster.\n");
             dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
             dialogAvn2.insert(dialogAvn2.begin() + 2, "Do you think you'll fall in to the river?\n\n");
             dialogAvn2.insert(dialogAvn2.begin() + 3, "1) No, I don't think so.\n\n2) Yes, I think I'll fall in to the river. \n");
-            dialogOut2;
+            dialogOutAvn2;
             cin >> answer;
             if(answer == 1){
                 system("cls");
-                dialogOut3;
+                dialogOutAvn3;
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
-                dialogOut2;
+                dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
                     system("cls");
@@ -93,9 +93,9 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.clear();
                     dialogAvn.push_back("\n   You decided to cross it. You has successfully crossed. This is\nthe bridge that crosses to Bibury, where the dragon cast a magic\nspell that illustrates the distance of the broken bridge was large\nbut once you have jumped over, you will find that it's easy\nto cross, not that far.\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
-                    dialogOut2;
+                    dialogOutAvn2;
                     con = 1;
                     cin.ignore();
                     break;
@@ -108,7 +108,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.push_back("\n   You already missed something.\n");
                     dialogAvn2.push_back("\n   You continue the journey.\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
                     for (char c : "\n   Your HP: ") {
                         cout << c;
@@ -120,18 +120,18 @@ void Avn(int &hp, int &money, bool &aventurine){
                         cout << c;
                         this_thread::sleep_for(chrono::milliseconds(50));
                     }
-                    dialogOut2;
+                    dialogOutAvn2;
                     cin.ignore();
                     break;
                 }
             }else if(answer == 2){
                 system("cls");
-                dialogOut3;
+                dialogOutAvn3;
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
-                dialogOut2;
+                dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
                     system("cls");
@@ -139,9 +139,9 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.clear();
                     dialogAvn.push_back("\n    You decided to cross it. At that moment, there was a strong\nwind blowing as you jumped. till you lose your balance Staggered into the\nfence of the bridge until it almost fell, but you were still\nable to hold onto the fence firmly in time. So you can cross safely. \n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
-                    dialogOut2;
+                    dialogOutAvn2;
                     con = 1;
                     cin.ignore();
                     break;
@@ -153,9 +153,9 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn.push_back("\n   You continue the journey.\n");
                     dialogAvn.push_back("\n   You already missed something.\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
-                    dialogOut2;
+                    dialogOutAvn2;
                     cin.ignore();
                     break;
                 }
@@ -164,22 +164,22 @@ void Avn(int &hp, int &money, bool &aventurine){
             system("cls");
             dialogAvn.clear();
             dialogAvn.push_back("\n   The river seemed to be flowing faster.\n");
-            dialogOut3;
+            dialogOutAvn3;
             dialogOutSlowAvn;
             dialogAvn3.insert(dialogAvn3.begin() + 2, "\n   The river seemed to be flowing faster.\n");
             dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
             dialogAvn2.insert(dialogAvn2.begin() + 2, "Do you think you'll fall in to the river?\n\n");
             dialogAvn2.insert(dialogAvn2.begin() + 3, "1) No, I don't think so.\n\n2) Yes, I think I'll fall in to the river. \n");
-            dialogOut2;
+            dialogOutAvn2;
             cin >> answer;
             if(answer == 1){
                 system("cls");
-                dialogOut3;
+                dialogOutAvn3;
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
-                dialogOut2;
+                dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
                     system("cls");
@@ -187,9 +187,9 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.clear();
                     dialogAvn.push_back("\n   You decided to cross it. you are very talented\nthat can cross the river It's not easy to get over it.\nThen you walk all the way to the end of the bridge\nand into the town of Bibury. Everything looks pretty\npetite. Including the entrance to the city as well.\n\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
-                    dialogOut2;
+                    dialogOutAvn2;
                     con = 1;
                     cin.ignore();
                     break;
@@ -201,7 +201,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.push_back("\n   You already missed something.\n");
                     dialogAvn2.push_back("\n   You continue the journey.\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
                     for (char c : "\n   Your HP: ") {
                         cout << c;
@@ -213,18 +213,18 @@ void Avn(int &hp, int &money, bool &aventurine){
                         cout << c;
                         this_thread::sleep_for(chrono::milliseconds(50));
                     }
-                    dialogOut2;
+                    dialogOutAvn2;
                     cin.ignore();
                     break;
                 }
             }else if(answer == 2){
                 system("cls");
-                dialogOut3;
+                dialogOutAvn3;
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
-                dialogOut2;
+                dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
                     system("cls");
@@ -238,9 +238,9 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.push_back("1) Yes,I will.\n\n2) No,I won't.\n");
                     dialogAvn2.push_back("-----------------------------------------------------------------\n");
                     dialogAvn2.push_back("Your Choice: ");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
-                    dialogOut2;
+                    dialogOutAvn2;
                     cin >> answer;
                     if(answer == 1){
                         system("cls");
@@ -251,7 +251,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                         dialogAvn2.push_back("\n   You continue the journey.\n");
                         dialogAvn2.push_back("\n*****************************************************************\n");
                         money += 30;
-                        dialogOut3;
+                        dialogOutAvn3;
                         dialogOutSlowAvn;
                         for (char c : "\n   Your Coins: ") {
                             cout << c;
@@ -262,7 +262,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));
                         }
-                        dialogOut2;
+                        dialogOutAvn2;
                         cin.ignore();
                         break;
                     }else if(answer == 2){
@@ -274,7 +274,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                         dialogAvn2.push_back("\n   You continue the journey.\n");
                         dialogAvn2.push_back("\n*****************************************************************\n");
                         hp -= 2;
-                        dialogOut3;
+                        dialogOutAvn3;
                         dialogOutSlowAvn;
                         for (char c : "\n   Your HP: ") {
                             cout << c;
@@ -285,7 +285,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));
                         }
-                        dialogOut2;
+                        dialogOutAvn2;
                         cin.ignore();
                         break;
                         }
@@ -296,15 +296,15 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.clear();
                     dialogAvn.push_back("\n   You decided not to cross it. Then you walk along the riverbank.\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
-                    dialogOut3;
+                    dialogOutAvn3;
                     dialogOutSlowAvn;
-                    dialogOut2;
+                    dialogOutAvn2;
                     cin.ignore();
                     break;
                 }
             }
         }
     }
-    pressEnterAvn();
     Summary(con, aventurine);
+    pressEnterAvn();
 }
