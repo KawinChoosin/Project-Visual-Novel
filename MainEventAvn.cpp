@@ -55,16 +55,16 @@ void Avn(int &hp, int &money, bool &aventurine){
         system("cls");
         dialogAvn3.push_back("*****************************************************************\n");
         dialogAvn.push_back("   In the middle of the day when the sun is very strong. As you\nwalk on a bridge across a river in front of one of the city gates\nand find that three of the timbers of the bridge were broken.\nUnderneath there\'s an open-mouthed crocodile waiting just where you\nstand. A light breeze blew and made the bridge sway back and forth.\n");
-        dialogOut3;
-        dialogOutSlowAvn;
-        dialogAvn3.push_back("   In the middle of the day when the sun is very strong. As you\nwalk on a bridge across a river in front of one of the city gates\nand find that three of the timbers of the bridge were broken.\nUnderneath there\'s an open-mouthed crocodile waiting just where you\nstand. A light breeze blew and made the bridge sway back and forth.\n");
         dialogAvn2.push_back("\n*****************************************************************\n");
         dialogAvn2.push_back("-----------------------------------------------------------------\n");
         dialogAvn2.push_back("Do you think your legs are long enough to cross this gap of the bridge?\n\n");
         dialogAvn2.push_back("1) I think my legs are long enough to cross it for sure!\n\n2) I don't think my legs are long enough to cross it!\n");
         dialogAvn2.push_back("-----------------------------------------------------------------\n");
         dialogAvn2.push_back("Your Choice: ");
+        dialogOut3;
+        dialogOutSlowAvn;
         dialogOut2;
+        dialogAvn3.push_back("   In the middle of the day when the sun is very strong. As you\nwalk on a bridge across a river in front of one of the city gates\nand find that three of the timbers of the bridge were broken.\nUnderneath there\'s an open-mouthed crocodile waiting just where you\nstand. A light breeze blew and made the bridge sway back and forth.\n");
         cin >> answer;
         if(answer == 1){
             system("cls");
