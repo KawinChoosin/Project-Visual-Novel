@@ -140,12 +140,3 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
     }
     pressEnterRsq();
 }
-
-int main(){
-    int hp = 5;
-    int money = 30;
-    bool aventurine = 0;
-    bool vase = 0;
-    Rsq(hp, money, aventurine, vase);
-}
-
