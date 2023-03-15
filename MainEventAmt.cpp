@@ -560,4 +560,4 @@ int main(){
     bool amethyst;
     Amt(hp,money,amethyst);
 
-}
+} 
