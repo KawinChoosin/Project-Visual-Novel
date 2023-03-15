@@ -13,25 +13,33 @@
 #include"end.cpp"
 using namespace std;
 
-#define hpcheck if(hp <= 0) playerLose();pressEnter();return 0;
+void playerLosemain(){
+    cout << "*******************************************************\n";
+	cout << "*                                                     *\n";
+	cout << "*                   YOU LOSE!!!                       *\n";
+	cout << "*                                                     *\n";
+	cout << "*******************************************************\n";
+}
+#define hpcheck if(hp <= 0){ playerLosemain(); \
+pressEnter();\
+return 0;\
+} \
 
-
-bool aventurine, rosequartz, sodalite, fluorite, tourmaline, howlite, amethyst; // เช็คชนิดของคริสตัล
+bool aventurine, rosequartz, sodalite, fluorite, amethyst; // เช็คชนิดของคริสตัล
 bool vase;
 int gems = 0; // จำนวนของหินที่เก็บได้แล้ว
 int money = 60; // ค่าเงิน
-int maxhp = 1; // ค่า maxhp
-int hp = 5; // ค่า hp
+int maxhp = 10; // ค่า maxhp
+int hp = 3; // ค่า hp
 int potion = 0;
-bool g1,g2,g3,g4,g5;
 
 int main(){
     srand(time(NULL));
     while(true){
-        Opening();///
+        
+        Opening();//
 
         Avn(hp, money, aventurine);//
-        hpcheck;
 
         werewolf(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);
         hpcheck;
@@ -70,12 +78,12 @@ int main(){
         FoundGirl(money);
         hpcheck;
 
-        wizard(hp, money, aventurine, rosequartz, sodalite, fluorite, 
-        amethyst);
+        wizard(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);
         hpcheck;
 
-        End(g1,g2,g3,g4,g5);///
+        End(aventurine, rosequartz, sodalite, fluorite, amethyst);///
         hpcheck;
+        return 0;
     }
 }
 

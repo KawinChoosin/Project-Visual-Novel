@@ -168,8 +168,8 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
             dialogSdl3.push_back("    The whole city is in the dark and the gate is closed. So you\ncan only lie in front of the gate\nuntil the morning\n");
             cin.ignore();
             pressEnterSdl();
+            dialogSdl.clear();
             dialogOutSdl3;
-            dialogOutSlowSdl;
             hp-=1;//
             for (char c : "\n    You lose 1 hp \n\n    Your hp: ") {
                 cout << c;
@@ -180,6 +180,7 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
             }
+            dialogOutSdl2;
             hpcheckSdl;
             pressEnterSdl();
             cout<<"*****************************************************************\n";
@@ -436,4 +437,4 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                 }
             }
 }
- 
+  

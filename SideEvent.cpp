@@ -11,7 +11,20 @@ void Tavern(int &, int &, int &); // Function เจอโรงเตี๊ย�
 void FoundGirl(int &); // Function เจอเด็กหญิง
 void FoundWoman(int &); // Function เจอหญิงสาว
 
-void pressEnter(){ // กด Enter เปลี่ยนฉาก
+
+#define hpcheckS if(hp<=0){\
+    pressEnter();\
+    playerLose();\
+    pressEnter();\
+    break;\
+    }\
+
+#define moneycheckS if(money<0){\
+    money=0;\
+    }\
+
+
+void pressEnter(){ // กด E nter เปลี่ยนฉาก
     cout << "Press Enter to continue...";
     cin.get();
     system("cls");
@@ -43,6 +56,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                 if(answer == 1){ // ถ้า accept -money +potion
                     system("cls");
                     money -= 30;
+                    moneycheckS;
                     cout << "*****************************************************************\n";
                     cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou accept the buy, your coin -30.\n\nYour coins: " << money << "\n";
                     cout << "\nYou continue the journey.\n";
@@ -54,6 +68,8 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                     if(x <= 70){ // ถ้าสุ่มได้ ได้ราคา 10 coins
                         system("cls");
                         money -= 10;
+                        moneycheckS;
+                        
                         cout << "*****************************************************************\n";
                         cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou convince the peddler to buy a potion for 10 coins.\nThe power of Aventurine make your charisma improved and \nthe power of Fluorite make you found the deal weakness. \nThe peddler accept the deal.\n\nYour coins: " << money << "\n";
                         cout << "\nYou continue the journey.\n";
@@ -74,6 +90,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                             cin >> answer;
                             if(answer == 1){ // ถ้าซื้อราคาเต็ม เงิน -30
                                 money -= 30;
+                                moneycheckS;
                                 system("cls");
                                 cout << "*****************************************************************\n";
                                 cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\nYou try to convince the peddler to buy a potion for 20 coins, \nbut he seems not satisfied and insists to sell for 30 coins.\n\nYou accept the buy, your coin -30.\n\nYour coins: " << money << "\n";
@@ -111,6 +128,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                     if(x <= 70){ // ถ้าสุ่มได้ ได้ราคา 10 coins
                         system("cls");
                         money -= 10;
+                        moneycheckS;
                         cout << "*****************************************************************\n";
                         cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou convince the peddler to buy a potion for 10 coins.\nThe power of Aventurine make your charisma improved.\nThe peddler accept the deal.\n\nYour coins: " << money << "\n";
                         cout << "\nYou continue the journey.\n";
@@ -145,6 +163,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                 if(answer == 1){ // ถ้าซื้อเลย เงิน-30 potion +1
                     system("cls");
                     money -= 30;
+                    moneycheckS;
                     cout << "*****************************************************************\n";
                     cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou accept the buy, your coin -30.\n\nYour coins: " << money << "\n";
                     cout << "\nYou continue the journey.\n";
@@ -156,6 +175,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                     if(x <= 70){ // สุ่มได้เงิน -20 potion +1
                         system("cls");
                         money -= 20;
+                        moneycheckS;
                         cout << "*****************************************************************\n";
                         cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou convince the peddler to buy a potion for 20 coins.\nThe power of Aventurine make your charisma improved.\nThe peddler accept the deal.\n\nYour coins: " << money << "\n";
                         cout << "\nYou continue the journey.\n";
@@ -176,6 +196,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                             cin >> answer;
                             if(answer == 1){ // ซื้อราคาเต็ม เงิน -30 potion +1
                                 money -= 30;
+                                moneycheckS;
                                 system("cls");
                                 cout << "*****************************************************************\n";
                                 cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\nYou try to convince the peddler to buy a potion for 20 coins, \nbut he seems not satisfied and insists to sell for 30 coins.\n\nYou accept the buy, your coin -30.\n\nYour coins: " << money << "\n";
@@ -213,6 +234,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                     if(x <= 70){ // สุ่มได้ ได้ราคา 20 coins เงิน-20 potion+1
                         system("cls");
                         money -= 20;
+                        moneycheckS;
                         cout << "*****************************************************************\n";
                         cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou convince the peddler to buy a potion for 20 coins.\nThe power of Aventurine make your charisma improved.\nThe peddler accept the deal.\n\nYour coins: " << money << "\n";
                         cout << "\nYou continue the journey.\n";
@@ -247,6 +269,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                 if(answer == 1){ // ถ้า accept เงิน -30 potion +1
                     system("cls");
                     money -= 30;
+                    moneycheckS;
                     cout << "*****************************************************************\n";
                     cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou accept the buy, your coin -30.\n\nYour coins: " << money << "\n";
                     cout << "\nYou continue the journey.\n";
@@ -258,6 +281,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                     if(x <= 70){ // สุ่มได้ ได้ราคา 20 coins เงิน -20 potion +1
                         system("cls");
                         money -= 20;
+                        moneycheckS;
                         cout << "*****************************************************************\n";
                         cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou convince the peddler to buy a potion for 20 coins.\nThe power of Fluorite make you found the deal's weakness point.\nYou use it against the peddler. He accept the deal unwillingly.\n\nYour coins: " << money << "\n";
                         cout << "\nYou continue the journey.\n";
@@ -278,6 +302,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                             cin >> answer;
                             if(answer == 1){ // ซื้อราคาเต็ม เงิน -30 potion +1
                                 money -= 30;
+                                moneycheckS;
                                 system("cls");
                                 cout << "*****************************************************************\n";
                                 cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\nYou try to convince the peddler to buy a potion for 20 coins, \nbut he seems not satisfied and insists to sell for 30 coins.\n\nYou accept the buy, your coin -30.\n\nYour coins: " << money << "\n";
@@ -315,6 +340,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                     if(x <= 70){ // สุ่มได้ ได้ราคา 20 coins เงิน -20 potion +1
                         system("cls");
                         money -= 20;
+                        moneycheckS;
                         cout << "*****************************************************************\n";
                         cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou convince the peddler to buy a potion for 20 coins.\nThe power of Aventurine make your charisma improved.The peddler accept the deal.\n\nYour coins: " << money << "\n";
                         cout << "\nYou continue the journey.\n";
@@ -348,6 +374,7 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
             if(answer == 1){ // ถ้าซื้อราคาเต็ม เงิน-30 potion +1
                 system("cls");
                 money -= 30;
+                moneycheckS;
                 cout << "*****************************************************************\n";
                 cout << "While you're leaving the town, you meet a\npeddler. He offers a potion to you, which is 30 coins cost.\n\nYou accept the buy, your coin -30.\n\nYour coins: " << money << "\n";
                 cout << "\nYou continue the journey.\n";
@@ -394,6 +421,7 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
             if(answer == 1){ // ถ้า accept เงิน-20 hp +1
                 system("cls");
                 money -= 20;
+                moneycheckS;
                 hp += 1;
                 cout << "*****************************************************************\n";
                 cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
@@ -402,6 +430,7 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
                 if(hp < maxhp) cout << "Your HP: " << hp << "(+1)\n";
                 cout << "\nYou continue the journey.\n";
                 cout << "\n*****************************************************************\n";
+                hpcheckS;
                 break;
             }else if(answer == 2){ // ถ้า decline พักใต้ต้นไม้แล้วเดินทางต่อ
                 system("cls");
@@ -454,6 +483,7 @@ void FoundGirl(int &money){ // เจอเด็กสาว
             cout << "While you are walking along the way, a girl approaches you \n\"My cart got stuck, my good man. Could you please give me a hand?\"\nshe says.\n\n";
             cout << "You help the girl who is the daughter of some rich man in a village nearby.\nShe is really grateful to you, so she gives you some coins for helping her.\n";
             money += 10;
+            moneycheckS;
             cout << "\nYour coins: " << money << "(+10)\n";
             cout << "\nYou continue your journey.\n";
             cout << "\n*****************************************************************\n";
@@ -494,6 +524,7 @@ void FoundWoman(int &hp){ // เจอหญิงสาวขอความช
             hp -= 1;
             cout << "\nYour HP: " << hp << "(-1)\n";
             cout << "\n*****************************************************************\n";
+            hpcheckS;
             break;
         }if(answer == 2){ // ไม่ช่วย เดินทางต่อ
             system("cls");

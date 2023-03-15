@@ -6,9 +6,9 @@
 
 using namespace std;
 
-#define dialogOut for(auto i = dialogFlr.begin(); i != dialogFlr.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
-#define dialogOut2 for(auto i = dialogFlr2.begin(); i != dialogFlr2.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
-#define dialogOut3 for(auto i = dialogFlr3.begin(); i != dialogFlr3.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutFlr for(auto i = dialogFlr.begin(); i != dialogFlr.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutFlr2 for(auto i = dialogFlr2.begin(); i != dialogFlr2.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutFlr3 for(auto i = dialogFlr3.begin(); i != dialogFlr3.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
 
 #define dialogOutSlowFlr for(auto i = dialogFlr.begin(); i != dialogFlr.end(); i++) { \
                       for (char c : *i) { \
@@ -54,17 +54,17 @@ void Flr(int &hp, int &money, bool &fluorite){
         dialogFlr3.push_back("*****************************************************************\n");
         dialogFlr.push_back("      Now it looks like you're getting lost in the middle\nof a barren valley. There are no people roaming around,\nonly a hot wind blowing past.\n");
         dialogFlr2.push_back("\n*****************************************************************\n");
-        dialogOut3;
+        dialogOutFlr3;
         dialogOutSlowFlr;
-        dialogOut2;
+        dialogOutFlr2;
         pressEnterFlr();
         dialogFlr3.push_back("      Now it looks like you're getting lost in the middle\nof a barren valley. There are no people roaming around,\nonly a hot wind blowing past.\n");
         system("cls");
         dialogFlr.clear();
         dialogFlr.push_back("\n      As you are walking through the crossroad, there is a\nragged and unconscious man running towards you.\n");
-        dialogOut3;
+        dialogOutFlr3;
         dialogOutSlowFlr;
-        dialogOut2;
+        dialogOutFlr2;
         pressEnterFlr();
         system("cls");
         dialogFlr.clear();
@@ -76,9 +76,9 @@ void Flr(int &hp, int &money, bool &fluorite){
         dialogFlr2.push_back("2) No, I would\'nt\n");
         dialogFlr2.push_back("-------------------------------------------------------------------\n");
         dialogFlr2.push_back("Your Choice: ");
-        dialogOut3;
+        dialogOutFlr3;
         dialogOutSlowFlr;
-        dialogOut2;
+        dialogOutFlr2;
         dialogFlr3.push_back("\n      He asks for food along with shaking your hand because he is\nvery hungry and hasn't eaten for days. At that time you had\nenough food with you for one more day\n");
         cin>>answer;
         dialogFlr.clear();
@@ -92,41 +92,40 @@ void Flr(int &hp, int &money, bool &fluorite){
             dialogFlr2.push_back("2) NO.\n");
             dialogFlr2.push_back("-------------------------------------------------------------------\n");
             dialogFlr2.push_back("Your Choice: ");
-            dialogOut3;
+            dialogOutFlr3;
             dialogOutSlowFlr;
-            dialogOut2;
-            cin>>answer;
+            dialogOutFlr2;
             dialogFlr3.push_back("\n      You give him food. He eats it rapidly as soon as he receives it.\nWhen he finishes eating, he invites you to the city.\n");
             do{
                 cin>>answer;
                 if(answer!=1&&answer!=2){
                     continue;
-                }else break;
+                }break;
             }while(true);
             system("cls");
             dialogFlr.clear();
             dialogFlr2.erase(dialogFlr2.begin() + 1, dialogFlr2.end());
             if(answer==1){
             dialogFlr.push_back("\n      You accept the invitation. He leads you to a big cave by\npassing through many intersections, then finds a hugewaterfall curtain.\n");
-            dialogOut3;
+            dialogOutFlr3;
             dialogOutSlowFlr;
-            dialogOut2;
+            dialogOutFlr2;
             dialogFlr3.push_back("\n      You accept the invitation. He leads you to a big cave by\npassing through many intersections, then finds a hugewaterfall curtain.\n");
             pressEnterFlr();
             system("cls");
             dialogFlr.clear();
             dialogFlr.push_back("\n     Through the curtain of the waterfall, the seemingly\nunconsciousman was purified into a cleanand haloed man.\n");
-            dialogOut3;
+            dialogOutFlr3;
             dialogOutSlowFlr;
-            dialogOut2;
+            dialogOutFlr2;
             dialogFlr3.push_back("\n     Through the curtain of the waterfall, the seemingly\nunconsciousman was purified into a cleanand haloed man.\n");
             pressEnterFlr();
             system("cls");
             dialogFlr.clear();
             dialogFlr.push_back("\n     Later, you realized that he is a priest named Tamo Mae and\nthis city is El Dorado, a city full of gold and precious stones. \n");
-            dialogOut3;
+            dialogOutFlr3;
             dialogOutSlowFlr;
-            dialogOut2;
+            dialogOutFlr2;
             dialogFlr3.push_back("\n     Later, you realized that he is a priest named Tamo Mae and\nthis city is El Dorado, a city full of gold and precious stones. \n");
             pressEnterFlr();
             system("cls");
@@ -138,9 +137,9 @@ void Flr(int &hp, int &money, bool &fluorite){
             dialogFlr2.push_back("2) No.\n");
             dialogFlr2.push_back("-------------------------------------------------------------------\n");
             dialogFlr2.push_back("Your Choice: ");
-            dialogOut3;
+            dialogOutFlr3;
             dialogOutSlowFlr;
-            dialogOut2;
+            dialogOutFlr2;
             dialogFlr3.push_back("\n     The priest invites you to stay in the temple and provide you\nwith food. So then this morning, you wake up refreshed and see\nthe beautiful and sylvan view of this temple. The priest asks\nyou to play \'Multiply Games\'.\n");
             cin>>answer;
             system("cls");
@@ -149,9 +148,10 @@ void Flr(int &hp, int &money, bool &fluorite){
                 pressEnterFlr();
                 dialogFlr.clear();
                 dialogFlr.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city on your own\nis impossible because the city plan is complicated. You have to\nhire some disciples of the temple to help you leave the city.\n");
-                dialogOut3;
+                dialogOutFlr3;
                 dialogOutSlowFlr;
                 money-=5;//
+              
                 moneycheckFlr;
                 for (char c : "You lose 5 coins \n\nYour coins: ") {
                             cout << c;
@@ -162,7 +162,7 @@ void Flr(int &hp, int &money, bool &fluorite){
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));
                 }
-                dialogOut2;
+                dialogOutFlr2;
                 dialogFlr3.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city on your own\nis impossible because the city plan is complicated. You have to\nhire some disciples of the temple to help you leave the city.\n");
             }else if(answer==1){
                 int x=rand()%70+30;
@@ -193,18 +193,19 @@ void Flr(int &hp, int &money, bool &fluorite){
                     dialogFlr.push_back
                     ("\n    The priest gave you an Fluorite , the \"Crystal of Logic\".\n");
                     fluorite=true; //Get Fluorite//
-                    dialogOut3;
+                    dialogOutFlr3;
                     dialogOutSlowFlr;
-                    dialogOut2;
-                    /*dialogFlr3.push_back
-                    ("\n    The priest gave you an Fluorite , the \"Crystal of Logic\"\n");*/
+                    dialogOutFlr2;
+                    dialogFlr.clear();
+                    dialogFlr3.push_back
+                    ("\n    The priest gave you an Fluorite , the \"Crystal of Logic\"\n");
                     pressEnterFlr();
                     system("cls");
                     dialogFlr.push_back("\n       Fluorite is used to clean out bad energies, encourage\npoliteness and intelligence.\n");
                     dialogFlr.push_back("\n       Then he let the disciples lead you out of the city.\n");
-                    dialogOut3;
+                    dialogOutFlr3;
                     dialogOutSlowFlr;
-                    dialogOut2;
+                    dialogOutFlr2;
                 }else if(win==0){
                     cout<<"------------------------------------------------------------------\n";
                     cout<<"INCORRECT! YOU LOSE T^T.\n";
@@ -213,10 +214,9 @@ void Flr(int &hp, int &money, bool &fluorite){
                     system("cls");
                     dialogFlr.clear();
                     dialogFlr.push_back("\n     The priest treats you to breakfast and lets you leave\nthe city by yourself. In fact, leaving the city\non your own is impossible because the city plan is complicated.\nYou have to hire some disciples of the temple to help\nyou leave the city.\n");
-                    dialogOut3;
+                    dialogOutFlr3;
                     dialogOutSlowFlr;
-                    money-=5;//
-                    moneycheckFlr;
+                    money-=5;
                     for (char c : "\nYou lose 5 coins \n\nYour coins: ") {
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));
@@ -226,13 +226,13 @@ void Flr(int &hp, int &money, bool &fluorite){
                             cout << c;
                             this_thread::sleep_for(chrono::milliseconds(50));
                     }
-                    dialogOut2;
+                    dialogOutFlr2;
                 }
             }
             }
         }else if(answer==2){
             dialogFlr.push_back("\n     You declined his request. That hungry ugly guy hits you hard.\n");
-            dialogOut3;
+            dialogOutFlr3;
             dialogOutSlowFlr;
             
             hp-=1;//
@@ -245,8 +245,7 @@ void Flr(int &hp, int &money, bool &fluorite){
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
             }
-            
-            dialogOut2;
+            dialogOutFlr2;
             hpcheckFlr;
             pressEnterFlr();
             cout<<"========================================================\n";
@@ -263,5 +262,4 @@ void Flr(int &hp, int &money, bool &fluorite){
     cout<<("\n          LET\'S CONTINUE THE JOURNEY ! \n\n");
     cout<<("*****************************************************************\n");
     pressEnterFlr();
-
-}
+} 
