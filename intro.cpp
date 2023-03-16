@@ -35,3 +35,4 @@ void intro(){
     // Set console output color back to default.
     SetConsoleTextAttribute(hConsole, 7);
 }
+
