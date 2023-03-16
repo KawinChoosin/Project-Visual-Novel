@@ -37,8 +37,8 @@ void Summary(int &con, bool &aventurine){
         aventurine = true;
         dialogAvn2.push_back("*****************************************************************\n");
         dialogAvn.push_back("   Within this city there are very beautiful old houses. There\nis a nature of trees that are lush green. It goes well with\ntraditional houses built of stone, merging with streams and small roads.\n");
-        dialogAvn.push_back("\n   When the dwarfs knew that you could cross the bridge, they\nwere very happy. In the past, it was seen that the gap between\nbridges was very wide. But now it's not wide anymore because you\nbelieved in your power. You destroyed the spell and helped the\ndwarfs to come out of the city\n");
-        dialogAvn.push_back("\n   So they gave you the Aventurine, the \"Crystal of opportunity\".\n");
+        dialogAvn.push_back("\n   When the dwarfs know that you could cross the bridge, they\nare very happy. In the past, it was seen that the gap between\nbridges was very wide. But now, it's not wide anymore because you\nbelieved in your power. You destroyed the spell and helped the\ndwarfs to come out of the city\n");
+        dialogAvn.push_back("\n   So they give you the Aventurine, the \"Crystal of opportunity\".\n");
         dialogAvn.push_back("\n   You get the Aventurine.\n");
         dialogAvn.push_back("\n   The Aventurine. Great for purification and opening the mind to\nnew possibilities, Aventurine can also boost creativity, calm the\nnerves before stressful situations, and ward off bad energies from\n\"psychic vampires\" in your life.\n");
         dialogAvn.push_back("\n   A whole town of dwarves come out to send you to the city\ngates with a gratefulness.\n");
@@ -69,10 +69,10 @@ void Avn(int &hp, int &money, bool &aventurine){
         if(answer == 1){
             system("cls");
             dialogAvn.clear();
-            dialogAvn.push_back("\n   The river seemed to be flowing faster.\n");
+            dialogAvn.push_back("\n   The river seems to be flowing faster.\n");
             dialogOutAvn3;
             dialogOutSlowAvn;
-            dialogAvn3.insert(dialogAvn3.begin() + 2, "\n   The river seemed to be flowing faster.\n");
+            dialogAvn3.insert(dialogAvn3.begin() + 2, "\n   The river seems to be flowing faster.\n");
             dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
             dialogAvn2.insert(dialogAvn2.begin() + 2, "Do you think you'll fall in to the river?\n\n");
             dialogAvn2.insert(dialogAvn2.begin() + 3, "1) No, I don't think so.\n\n2) Yes, I think I'll fall in to the river. \n");
@@ -137,7 +137,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                     system("cls");
                     dialogAvn.clear();
                     dialogAvn2.clear();
-                    dialogAvn.push_back("\n    You decided to cross it. At that moment, there was a strong\nwind blowing as you jumped. till you lose your balance Staggered into the\nfence of the bridge until it almost fell, but you were still\nable to hold onto the fence firmly in time. So you can cross safely. \n");
+                    dialogAvn.push_back("\n    You decided to cross it. At that moment, there is a strong\nwind blowing as you jumped. You lose your balance and stagger into the\nfence of the bridge until it almost falls, but you are still\nable to hold onto the fence firmly in time. So you can cross safely. \n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
                     dialogOutAvn3;
                     dialogOutSlowAvn;
@@ -163,10 +163,10 @@ void Avn(int &hp, int &money, bool &aventurine){
         }else if(answer == 2){
             system("cls");
             dialogAvn.clear();
-            dialogAvn.push_back("\n   The river seemed to be flowing faster.\n");
+            dialogAvn.push_back("\n   The river seems to be flowing faster.\n");
             dialogOutAvn3;
             dialogOutSlowAvn;
-            dialogAvn3.insert(dialogAvn3.begin() + 2, "\n   The river seemed to be flowing faster.\n");
+            dialogAvn3.insert(dialogAvn3.begin() + 2, "\n   The river seems to be flowing faster.\n");
             dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
             dialogAvn2.insert(dialogAvn2.begin() + 2, "Do you think you'll fall in to the river?\n\n");
             dialogAvn2.insert(dialogAvn2.begin() + 3, "1) No, I don't think so.\n\n2) Yes, I think I'll fall in to the river. \n");
@@ -185,7 +185,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                     system("cls");
                     dialogAvn.clear();
                     dialogAvn2.clear();
-                    dialogAvn.push_back("\n   You decided to cross it. you are very talented\nthat can cross the river It's not easy to get over it.\nThen you walk all the way to the end of the bridge\nand into the town of Bibury. Everything looks pretty\npetite. Including the entrance to the city as well.\n\n");
+                    dialogAvn.push_back("\n   You decided to cross it. You are very talented\nthat can cross the river It's not easy to get over it.\nThen you walk all the way to the end of the bridge\nand into the town of Bibury. Everything looks pretty\npetite including the entrance to the city as well.\n\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
                     dialogOutAvn3;
                     dialogOutSlowAvn;
@@ -230,8 +230,8 @@ void Avn(int &hp, int &money, bool &aventurine){
                     system("cls");
                     dialogAvn.clear();
                     dialogAvn2.clear();
-                    dialogAvn.push_back("\n   You decided to cross it. You fall into the river But\nfortunately, you are not dead because those crocodiles are\njust statues. that were created to be very realistic to\nprevent enemies that may attack people in the city\n");
-                    dialogAvn.push_back("\n   At that moment when you were getting out of the river Two\ndwarfs in Bibury passed by on the banks of the riverbank, his hat\nblown into the river near by you.\n");
+                    dialogAvn.push_back("\n   You decided to cross it. You fall into the river but\nfortunately, you are not dead because those crocodiles are\njust statues that were created to be very realistic to\nprevent enemies that may attack people in the city\n");
+                    dialogAvn.push_back("\n   At that moment when you are getting out of the river, two\ndwarfs in Bibury pass by on the banks of the riverbank. His hat\nis blown into the river near by you.\n");
                     dialogAvn2.push_back("\n*****************************************************************\n");
                     dialogAvn2.push_back("-----------------------------------------------------------------\n");
                     dialogAvn2.push_back("Will you pick it back to them?\n\n");
@@ -246,7 +246,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                         system("cls");
                         dialogAvn.clear();
                         dialogAvn2.clear();
-                        dialogAvn.push_back("\n   You took it back to dwarf. They were so happy and give you money\nfor your kindness.\n");
+                        dialogAvn.push_back("\n   You take it back to dwarf. They are so happy and give you money\nfor your kindness.\n");
                         dialogAvn2.push_back("\n   You already missed something.\n");
                         dialogAvn2.push_back("\n   You continue the journey.\n");
                         dialogAvn2.push_back("\n*****************************************************************\n");
@@ -269,7 +269,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                         system("cls");
                         dialogAvn.clear();
                         dialogAvn2.clear();
-                        dialogAvn.push_back("\n   You did not take it back to dwarf. Then they were angry and throw\na stone to you. So you have been injured.\n");
+                        dialogAvn.push_back("\n   You don\'t take it back to dwarf. Then they are angry and throw\na stone to you. So you have been injured.\n");
                         dialogAvn2.push_back("\n   You already missed something.\n");
                         dialogAvn2.push_back("\n   You continue the journey.\n");
                         dialogAvn2.push_back("\n*****************************************************************\n");
