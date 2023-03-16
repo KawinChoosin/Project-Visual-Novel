@@ -279,7 +279,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                         pressEnterSdl();
                         dialogSdl.clear();
                         dialogSdl.push_back("\n    The vase you\'ve got from Mark Clay\'s help you win the\nauction because it is priceless. Valkyrie also likes\nthis artwork but he couldn't own it in the past.\nSo, you get Sodalite and you get another bonus.\n");
-                        money+=15;//
+                        money = money - bidding + 15;//
                         moneycheckSdl;
                         dialogOutSdl3;
                         dialogOutSlowSdl;
@@ -310,7 +310,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                     dialogSdl2.insert(dialogSdl2.begin(), "\n ------------------------------------------------ \n|Sodalite boost your intuition self-expression   |\n|and to calm oversensitivity, open your mind     |\n|and using you wisdom.                           |\n ------------------------------------------------ \n");
                     dialogOutSdl3;
                     dialogOutSlowSdl;
-                    money+=15;//
+                    money = money - bidding + 15;//
                     moneycheckSdl;
                     for (char c : "\n    You get 15 coins\n\n    Your coins: ") {
                         cout << c;
@@ -382,7 +382,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                             pressEnterSdl();
                             dialogSdl.clear();
                             dialogSdl.push_back("\n    The vase you\'ve got from Mark Clay\'s help you win the\nauction because it is priceless. Valkyrie also likes\nthis artwork but he couldn't own it in the past.\nSo, you get Sodalite and you get another bonus.\n");
-                            money+=15;//
+                            money = money - bidding + 15;//
                             moneycheckSdl;
                             dialogOutSdl3;
                             dialogOutSlowSdl;
@@ -413,7 +413,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                         dialogSdl2.insert(dialogSdl2.begin(), "\n ------------------------------------------------ \n|Sodalite boost your intuition self-expression   |\n|and to calm oversensitivity, open your mind     |\n|and using you wisdom.                           |\n ------------------------------------------------ \n");
                         dialogOutSdl3;
                         dialogOutSlowSdl;
-                        money+=15;//
+                        money = money - bidding + 15;//
                         moneycheckSdl;
                         for (char c : "\n    You get 15 coins\n\n    Your coins: ") {
                             cout << c;
