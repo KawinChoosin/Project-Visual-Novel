@@ -171,8 +171,7 @@ void Amt(int &hp, int &money, bool &amethyst)
             }
             break;
         }
-        if (answer == 2)
-        {
+        if (answer == 2){
             dialogAmt2.push_back("*****************************************************************\n");
             dialogAmt.push_back("   You decided not to enter the hut. And keep going to another\nkingdom. \n");
             dialogAmt3.push_back("\n*****************************************************************\n");

@@ -45,7 +45,6 @@ void playerLoseM(){
 	cout << "*******************************************************\n";
 }
 
-
 void checkstone(int &stone, bool &aventurine, bool &rosequartz, bool &sodalite, bool &fluorite, bool &amethyst){
     stone=0;
     if(aventurine==1){

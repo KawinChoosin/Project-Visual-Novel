@@ -11,7 +11,6 @@ void Tavern(int &, int &, int &); // Function เจอโรงเตี๊ย�
 void FoundGirl(int &); // Function เจอเด็กหญิง
 void FoundWoman(int &); // Function เจอหญิงสาว
 
-
 #define hpcheckS if(hp<=0){\
     pressEnter();\
     playerLose();\

@@ -17,7 +17,7 @@ string name,thing;
                         cout << c; \
                         this_thread::sleep_for(chrono::milliseconds(50)); \
                     } \
-                  } // #define ให้ cout dialog ออกมา.
+                  } // #define ให้ cout dialog ออกมา
 
 vector<string> dialogRsq;
 vector<string> dialogRsq2;
