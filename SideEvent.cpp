@@ -674,8 +674,3 @@ void FoundWoman(int &hp){ // เจอหญิงสาวขอความช
     cin.ignore();
     pressEnter();
 }
-
-int main(){
-    int money,hp,maxhp;
-    Tavern(money, hp, maxhp);
-}

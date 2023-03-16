@@ -1114,10 +1114,4 @@ void wizard(int &hp, int &money, bool &aventurine, bool &rosequartz, bool &sodal
 }
 
 
-int main(){
-    int hp,money;
-    bool aventurine, rosequartz, sodalite, fluorite, amethyst;
-    werewolf(hp,money, aventurine, rosequartz, sodalite, fluorite, amethyst);
-}
-
 
