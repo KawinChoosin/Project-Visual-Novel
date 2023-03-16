@@ -63,13 +63,19 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
         dialogSdl2.push_back("\n1) Yes.");
         dialogSdl2.push_back("\n2) No.\n");
         dialogSdl2.push_back("-----------------------------------------------------------------\n");
-        dialogSdl2.push_back("Your Choice: ");
         dialogOutSdl3;
         dialogOutSlowSdl;
         dialogOutSdl2;
         dialogSdl2.erase(dialogSdl2.begin() + 2, dialogSdl2.begin() + 5);
         dialogSdl3.push_back("    In the twilight, the sun is about to set after a long\njourney. You pass by a town that looked quiet outside. No\n one is passing by and surrounding by large mountains.\nThere is only a dim torch light in front of the city gate.\n");
-        cin>>answer;
+        do{
+            cout<<"Your Choice: ";
+            cin>>answer;
+            if(answer!=1&&answer!=2){
+                cout<<"Wrong answer, Try again.\n";
+                continue;
+            }break;
+        }while(true);
         dialogSdl.clear();
         system("cls");
         if(answer==1){
@@ -83,7 +89,14 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
             dialogOutSlowSdl;
             dialogOutSdl2;
             dialogSdl3.push_back("\n    At that moment, an old man passing by says to you, \"Inside there\nis the item you are looking for...\".\n");
-            cin >> answer;
+            do{
+                cout<<"Your Choice: ";
+                cin>>answer;
+                if(answer!=1&&answer!=2){
+                    cout<<"Wrong answer, Try again.\n";
+                    continue;
+                }break;
+            }while(true);
             dialogSdl.clear();
             if(answer == 2){
                 system("cls");
@@ -111,11 +124,17 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
         dialogSdl2.push_back("1) Yes.\n");
         dialogSdl2.push_back("2) No.\n");
         dialogSdl2.push_back("-----------------------------------------------------------------\n");
-        dialogSdl2.push_back("Your Choice: ");
         dialogOutSdl3;
         dialogOutSlowSdl;
         dialogOutSdl2;
-        cin >> answer;
+        do{
+            cout<<"Your Choice: ";
+            cin>>answer;
+            if(answer!=1&&answer!=2){
+                cout<<"Wrong answer, Try again.\n";
+                continue;
+            }break;
+        }while(true);
         dialogSdl3.push_back("    After the auction, everyone gradually left. But when you walk out,\nthere's no one to be found and all the lights in other stores go\noff. The manager has offered you to stay in the upstairs room of\nthe store. Will you accept the offer?\n");
         dialogSdl.clear();
         dialogSdl2.erase(dialogSdl2.begin() + 1, dialogSdl2.end());
@@ -227,7 +246,14 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
             dialogOutSdl2;
             dialogSdl2.erase(dialogSdl2.begin() + 2, dialogSdl2.begin() + 5);
             dialogSdl3.push_back("\n    There are many  beautiful jewels. Some are common and some are\nrare ones. They are all continually being auctioned off. And in the\nend there is one last gem which is the highlight of the\ngem tonight. It might be the gem you are looking for.\n");
+            do{
+            cout<<"Your Choice: ";
             cin>>answer;
+            if(answer!=1&&answer!=2){
+                cout<<"Wrong answer, Try again.\n";
+                continue;
+                }break;
+            }while(true);
             dialogSdl.clear();
             system("cls");
             if(answer == 1){
@@ -332,7 +358,14 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                 dialogOutSlowSdl;
                 dialogOutSdl2;
                 dialogSdl2.erase(dialogSdl2.begin() + 2, dialogSdl2.begin() + 4);
-                cin>>answer;
+                do{
+                    cout<<"Your Choice: ";
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        cout<<"Wrong answer, Try again.\n";
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){
                     dialogSdl2.insert(dialogSdl2.begin() + 2, "How much will you bid?\n");
                     do{
