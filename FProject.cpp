@@ -10,7 +10,7 @@
 #include"MainEventFlr.cpp"
 #include"MainEventAmt.cpp"
 #include"Monster.cpp"
-#include"end.cpp"
+#include"end.cpp" 
 #include"intro.cpp"
 
 using namespace std;
@@ -30,7 +30,8 @@ return 0;\
 bool aventurine, rosequartz, sodalite, fluorite, amethyst; // เช็คชนิดของคริสตัล 
 bool vase;
 int gems = 0; // จำนวนของหินที่เก็บได้แล้ว
-int money = 60; // ค่าเงิน
+int money = 60;
+ // ค่าเงิน
 int maxhp = 10; // ค่า maxhp
 int hp = 3; // ค่า hp
 int potion = 0;
@@ -42,28 +43,28 @@ int main(){
         Opening();//
 
         Avn(hp, money, aventurine);//
+        hpcheck;
 
-        werewolf(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);
+        skeletons(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);//
         hpcheck;
 
         Rsq(hp, money, rosequartz, vase);//
         hpcheck;
 
-        bandit(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);
+        bandit(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);//
         hpcheck;
 
-        Tavern(money, hp, maxhp);
+        Tavern(money, hp, maxhp);//
         hpcheck;
 
         Sdl(hp, money, sodalite, vase);//
         hpcheck;
 
+        werewolf(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);
+        hpcheck;
+
         FoundWoman(hp);
         hpcheck;
-
-        skeletons(hp, money, aventurine, rosequartz, sodalite, fluorite, amethyst);
-        hpcheck;
-
 
         Flr(hp, money, fluorite);//
         hpcheck;
@@ -85,6 +86,7 @@ int main(){
 
         End(aventurine, rosequartz, sodalite, fluorite, amethyst);///
         hpcheck;
+        
         return 0;
     }
 }
