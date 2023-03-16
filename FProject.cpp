@@ -2,6 +2,10 @@
 #include<ctime>
 #include<string>
 #include<cstdlib>
+#include <chrono>
+#include <thread>
+#include <vector>
+#include <windows.h>
 #include"Opening.cpp"
 #include"SideEvent.cpp"
 #include"MainEventAvn.cpp"
