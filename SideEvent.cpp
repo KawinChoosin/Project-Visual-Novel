@@ -69,7 +69,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                 cout << "1) Accept\n\n2) Convince the peddler for discount\n\n3) Decline\n";
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Your Choice: ";
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2&&answer!=3){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){ // ถ้า accept -money +potion
                     system("cls");
                     money -= 30;
@@ -104,7 +109,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                             cout << "1) Accept\n\n2) Decline\n";
                             cout << "-----------------------------------------------------------------\n";
                             cout << "Your Choice: ";
-                            cin >> answer;
+                            do{
+                                cin>>answer;
+                                if(answer!=1&&answer!=2){
+                                    continue;
+                                }break;
+                            }while(true);
                             if(answer == 1){ // ถ้าซื้อราคาเต็ม เงิน -30
                                 money -= 30;
                                 moneycheckS;
@@ -139,7 +149,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                 cout << "1) Convince the peddler for discount\n\n2) Decline\n";
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Your Choice: ";
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){ // ถ้าเลือก convince จะสุ่ม โอกาส70%
                     int x = (rand() % 100) + 1;
                     if(x <= 70){ // ถ้าสุ่มได้ ได้ราคา 10 coins
@@ -176,7 +191,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                 cout << "1) Accept\n\n2) Convince the peddler for discount\n\n3) Decline\n";
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Your Choice: ";
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2&&answer!=3){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){ // ถ้าซื้อเลย เงิน-30 potion +1
                     system("cls");
                     money -= 30;
@@ -210,7 +230,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                             cout << "1) Accept\n\n2) Decline\n";
                             cout << "-----------------------------------------------------------------\n";
                             cout << "Your Choice: ";
-                            cin >> answer;
+                            do{
+                                cin>>answer;
+                                if(answer!=1&&answer!=2){
+                                    continue;
+                                }break;
+                            }while(true);
                             if(answer == 1){ // ซื้อราคาเต็ม เงิน -30 potion +1
                                 money -= 30;
                                 moneycheckS;
@@ -242,10 +267,15 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
             }else{ // ถ้าเงินน้อยกว่า 30 จะมี 2 ตัวเลือก
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Will you accept the offer?" << "(Your coins: " << money << ")\n\n";
-                cout << "1) Convince the peddler for discount\n\n) Decline\n";
+                cout << "1) Convince the peddler for discount\n\n2) Decline\n";
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Your Choice: ";
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){ // เลือก convince สุ่มโอกาส70%
                     int x = (rand() % 100) + 1;
                     if(x <= 70){ // สุ่มได้ ได้ราคา 20 coins เงิน-20 potion+1
@@ -282,7 +312,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                 cout << "1) Accept\n\n2) Convince the peddler for discount\n\n3) Decline\n";
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Your Choice: ";
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){ // ถ้า accept เงิน -30 potion +1
                     system("cls");
                     money -= 30;
@@ -316,7 +351,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
                             cout << "1) Accept\n\n2) Decline\n";
                             cout << "-----------------------------------------------------------------\n";
                             cout << "Your Choice: ";
-                            cin >> answer;
+                            do{
+                                cin>>answer;
+                                if(answer!=1&&answer!=2){
+                                    continue;
+                                }break;
+                            }while(true);
                             if(answer == 1){ // ซื้อราคาเต็ม เงิน -30 potion +1
                                 money -= 30;
                                 moneycheckS;
@@ -348,10 +388,15 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
             }else{ // ถ้าเงินน้อยกว่า 30 จะมี 2 ตัวเลือก
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Will you accept the offer?" << "(Your coins: " << money << ")\n\n";
-                cout << "1) Convince the peddler for discount\n\n) Decline\n";
+                cout << "1) Convince the peddler for discount\n\n2) Decline\n";
                 cout << "-----------------------------------------------------------------\n";
                 cout << "Your Choice: ";
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){ // เลือก convince จะสุ่มโอกาส70%
                     int x = (rand() % 100) + 1;
                     if(x <= 70){ // สุ่มได้ ได้ราคา 20 coins เงิน -20 potion +1
@@ -387,7 +432,12 @@ void sideEventPeddler(int &money, bool &aventurine, bool &fluorite, int &potion)
             cout << "1) Accept\n\n2) Decline\n";
             cout << "-----------------------------------------------------------------\n";
             cout << "Your Choice: ";
-            cin >> answer;
+            do{
+                cin>>answer;
+                if(answer!=1&&answer!=2){
+                    continue;
+                }break;
+            }while(true);
             if(answer == 1){ // ถ้าซื้อราคาเต็ม เงิน-30 potion +1
                 system("cls");
                 money -= 30;
@@ -612,7 +662,12 @@ void FoundGirl(int &money){ // เจอเด็กสาว
         cout << "1) Help the girl\n\n2) Ignore and keep going\n";
         cout << "-----------------------------------------------------------------\n";
         cout << "Your Choice: ";
-        cin >> answer;
+        do{
+                cin>>answer;
+                if(answer!=1&&answer!=2){
+                    continue;
+                }break;
+        }while(true);
         if(answer == 1){ // ช่วย เงิน +10
             system("cls");
             cout << "*****************************************************************\n";
@@ -650,7 +705,12 @@ void FoundWoman(int &hp){ // เจอหญิงสาวขอความช
         cout << "1) Help the woman\n\n2) Ignore and keep going\n";
         cout << "-----------------------------------------------------------------\n";
         cout << "Your Choice: ";
-        cin >> answer;
+        do{
+                cin>>answer;
+                if(answer!=1&&answer!=2){
+                    continue;
+                }break;
+        }while(true);
         if(answer == 1){ // ช่วย hp -1
             system("cls");
             cout << "*****************************************************************\n";
