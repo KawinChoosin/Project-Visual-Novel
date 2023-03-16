@@ -31,6 +31,6 @@ void intro(){
 
     pressEntersintro();
 
-    // Set console output color back to default
+    // Set console output color back to default.
     SetConsoleTextAttribute(hConsole, 7);
 }
