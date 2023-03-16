@@ -65,7 +65,12 @@ void Avn(int &hp, int &money, bool &aventurine){
         dialogOutSlowAvn;
         dialogOutAvn2;
         dialogAvn3.push_back("   In the middle of the day when the sun is very strong. As you\nwalk on a bridge across a river in front of one of the city gates\nand find that three of the timbers of the bridge were broken.\nUnderneath there\'s an open-mouthed crocodile waiting just where you\nstand. A light breeze blew and made the bridge sway back and forth.\n");
-        cin >> answer;
+        do{
+            cin>>answer;
+            if(answer!=1&&answer!=2){
+                continue;
+            }break;
+        }while(true);
         if(answer == 1){
             system("cls");
             dialogAvn.clear();
@@ -77,7 +82,12 @@ void Avn(int &hp, int &money, bool &aventurine){
             dialogAvn2.insert(dialogAvn2.begin() + 2, "Do you think you'll fall in to the river?\n\n");
             dialogAvn2.insert(dialogAvn2.begin() + 3, "1) No, I don't think so.\n\n2) Yes, I think I'll fall in to the river. \n");
             dialogOutAvn2;
-            cin >> answer;
+            do{
+                cin>>answer;
+                if(answer!=1&&answer!=2){
+                    continue;
+                }break;
+            }while(true);
             if(answer == 1){
                 system("cls");
                 dialogOutAvn3;
@@ -86,7 +96,12 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){
                     system("cls");
                     dialogAvn.clear();
@@ -132,7 +147,12 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){
                     system("cls");
                     dialogAvn.clear();
@@ -171,7 +191,12 @@ void Avn(int &hp, int &money, bool &aventurine){
             dialogAvn2.insert(dialogAvn2.begin() + 2, "Do you think you'll fall in to the river?\n\n");
             dialogAvn2.insert(dialogAvn2.begin() + 3, "1) No, I don't think so.\n\n2) Yes, I think I'll fall in to the river. \n");
             dialogOutAvn2;
-            cin >> answer;
+            do{
+                cin>>answer;
+                if(answer!=1&&answer!=2){
+                    continue;
+                }break;
+            }while(true);
             if(answer == 1){
                 system("cls");
                 dialogOutAvn3;
@@ -180,7 +205,12 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){
                     system("cls");
                     dialogAvn.clear();
@@ -225,7 +255,12 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
                 dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
-                cin >> answer;
+                do{
+                    cin>>answer;
+                    if(answer!=1&&answer!=2){
+                        continue;
+                    }break;
+                }while(true);
                 if(answer == 1){
                     system("cls");
                     dialogAvn.clear();
@@ -241,7 +276,12 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogOutAvn3;
                     dialogOutSlowAvn;
                     dialogOutAvn2;
-                    cin >> answer;
+                    do{
+                        cin>>answer;
+                        if(answer!=1&&answer!=2){
+                            continue;
+                        }break;
+                    }while(true);
                     if(answer == 1){
                         system("cls");
                         dialogAvn.clear();
