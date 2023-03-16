@@ -30,19 +30,19 @@ void pressEnters(){ // กด Enter เปลี่ยนฉาก
 void Opening(){ // ฉากเปิด
     system("cls");
     dialogOpn3.push_back("*****************************************************************\n");
-    dialogOpn.push_back("   In the Kingdom of Crystonia, there are 'Crystals of Soul'\nwhich was created by seven sorcerers. They are sources of spirits of\nall livings in the kingdom. The Crystals of Soul, which are keep the\nkingdom at peace and unity, were stored in the Mountain of Spirits.\n");
+    dialogOpn.push_back("   In the Kingdom of Crystonia, there are 'Crystals of Soul'\nwhich was created by five sorcerers. They are sources of spirits of\nall livings in the kingdom. The Crystals of Soul, which are keep the\nkingdom at peace and unity, were stored in the Mountain of Spirits.\n");
     dialogOpn2.push_back("\n*****************************************************************\n");
     dialogOutOpn3;
     dialogOutSlowOpn;
     dialogOutOpn2;
-    dialogOpn3.push_back("   In the Kingdom of Crystonia, there are 'Crystals of Soul'\nwhich was created by seven sorcerers. They are sources of spirits of\nall livings in the kingdom. The Crystals of Soul, which are keep the\nkingdom at peace and unity, were stored in the Mountain of Spirits.\n");
+    dialogOpn3.push_back("   In the Kingdom of Crystonia, there are 'Crystals of Soul'\nwhich was created by five sorcerers. They are sources of spirits of\nall livings in the kingdom. The Crystals of Soul, which are keep the\nkingdom at peace and unity, were stored in the Mountain of Spirits.\n");
     dialogOpn.clear();
     pressEnters();//กด Enter เปลี่ยนฉาก
-    dialogOpn.push_back("\n   The Crystals of Soul is consist of seven crystals:\n- Amethyst: Crystal of Purity\n- Howlite: Crystal of Tolerance and Clarity of thought\n- Pink Tourmaline: Crystal of Amity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Aventurine: Crystal of Opportunity\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n");
+    dialogOpn.push_back("\n   The Crystals of Soul is consist of five crystals:\n- Amethyst: Crystal of Purity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Aventurine: Crystal of Opportunity\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n");
     dialogOutOpn3;
     dialogOutSlowOpn;
     dialogOutOpn2;
-    dialogOpn3.push_back("\n   The Crystals of Soul is consist of seven crystals:\n- Amethyst: Crystal of Purity\n- Howlite: Crystal of Tolerance and Clarity of thought\n- Pink Tourmaline: Crystal of Amity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Aventurine: Crystal of Opportunity\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n");
+    dialogOpn3.push_back("\n   The Crystals of Soul is consist of five crystals:\n- Amethyst: Crystal of Purity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Aventurine: Crystal of Opportunity\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n");
     dialogOpn.clear();
     pressEnters();//กด Enter เปลี่ยนฉาก
     dialogOpn.push_back("\n   But one day, the dragon came and stole the\ngem by magic, making the you who are the\nguard and various animals pass out.\n");
@@ -52,7 +52,7 @@ void Opening(){ // ฉากเปิด
     dialogOpn3.push_back("\n   But one day, the dragon came and stole the\ngem by magic, making the you who are the\nguard and various animals pass out.\n");
     dialogOpn.clear();
     pressEnters();//กด Enter เปลี่ยนฉาก
-    dialogOpn.push_back("\n   Now, the dragon has stored seven crystals in\neach town of the dragon subordinate. You\nmust try your best to retrieve crystal as soon\nas possible. Because the crystals should be\nstored in the Mountain of Spirits, or otherwise\nthe Kingdom of Crystonia will be cursed and\nin chaos.\n\nChoose the path you think which is the best.\n");
+    dialogOpn.push_back("\n   Now, the dragon has stored five crystals in\neach town of the dragon subordinate. You\nmust try your best to retrieve crystal as soon\nas possible. Because the crystals should be\nstored in the Mountain of Spirits, or otherwise\nthe Kingdom of Crystonia will be cursed and\nin chaos.\n\nChoose the path you think which is the best.\n");
     dialogOutOpn3;
     dialogOutSlowOpn;
     dialogOutOpn2;

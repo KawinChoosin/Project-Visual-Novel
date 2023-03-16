@@ -11,6 +11,7 @@
 #include"MainEventAmt.cpp"
 #include"Monster.cpp"
 #include"end.cpp"
+#include"intro.cpp"
 using namespace std;
 
 void playerLosemain(){
@@ -36,7 +37,7 @@ int potion = 0;
 int main(){
     srand(time(NULL));
     while(true){
-        
+        intro();
         Opening();//
 
         Avn(hp, money, aventurine);//
