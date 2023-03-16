@@ -38,11 +38,11 @@ void Opening(){ // ฉากเปิด
     dialogOpn3.push_back("   In the Kingdom of Crystonia, there are 'Crystals of Soul'\nwhich was created by five sorcerers. They are sources of spirits of\nall livings in the kingdom. The Crystals of Soul, which are keep the\nkingdom at peace and unity, were stored in the Mountain of Spirits.\n");
     dialogOpn.clear();
     pressEnters();//กด Enter เปลี่ยนฉาก
-    dialogOpn.push_back("\n   The Crystals of Soul is consist of five crystals:\n- Amethyst: Crystal of Purity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Aventurine: Crystal of Opportunity\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n");
+    dialogOpn.push_back("\n   The Crystals of Soul is consist of five crystals:\n- Aventurine: Crystal of Opportunity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n- Amethyst: Crystal of Purity\n");
     dialogOutOpn3;
     dialogOutSlowOpn;
     dialogOutOpn2;
-    dialogOpn3.push_back("\n   The Crystals of Soul is consist of five crystals:\n- Amethyst: Crystal of Purity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Aventurine: Crystal of Opportunity\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n");
+    dialogOpn3.push_back("\n   The Crystals of Soul is consist of five crystals:\n- Aventurine: Crystal of Opportunity\n- Rose Quartz: Crystal of Forgiveness and Love\n- Sodalite: Crystal of Logic\n- Fluorite: Crystal of Wisdom\n- Amethyst: Crystal of Purity\n");
     dialogOpn.clear();
     pressEnters();//กด Enter เปลี่ยนฉาก
     dialogOpn.push_back("\n   But one day, the dragon came and stole the\ngem by magic, making the you who are the\nguard and various animals pass out.\n");
