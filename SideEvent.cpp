@@ -1,7 +1,8 @@
-#include<iostream>
-#include<ctime>
-#include<string>
-#include<cstdlib>
+#include <iostream>
+#include <string>
+#include <chrono>
+#include <thread>
+#include <vector>
 using namespace std;
 
 void pressEnter(); // กด Enter เพื่อไปต่อ
@@ -10,6 +11,23 @@ void sideEventPeddler(int &, bool &, bool &, int &); // Function เจอพ่
 void Tavern(int &, int &, int &); // Function เจอโรงเตี๊ยม
 void FoundGirl(int &); // Function เจอเด็กหญิง
 void FoundWoman(int &); // Function เจอหญิงสาว
+
+#define dialogOutS for(auto i = dialogS.begin(); i != dialogS.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutS2 for(auto i = dialogS2.begin(); i != dialogS2.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+#define dialogOutS3 for(auto i = dialogS3.begin(); i != dialogS3.end(); i++) cout << *i; // #define ให้ cout dialog ออกมา
+
+
+#define dialogOutSlowS for(auto i = dialogS.begin(); i != dialogS.end(); i++) { \
+                      for (char c : *i) { \
+                        cout << c; \
+                        this_thread::sleep_for(chrono::milliseconds(50)); \
+                    } \
+                  } // #define ให้ cout dialog ออกมา.
+
+vector<string> dialogS;
+vector<string> dialogS2;
+vector<string> dialogS3;
+
 
 #define hpcheckS if(hp<=0){\
     pressEnter();\
@@ -406,25 +424,93 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
     int answer;
     while(true){
         system("cls");
-        cout << "*****************************************************************\n";
-        cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
-        cout << "Your coins: " << money << "\n";
-        cout << "\n*****************************************************************\n";
+        dialogS3.push_back
+        ("*****************************************************************\n");
+        dialogS.push_back(
+        "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n");
+        dialogS2.push_back("\n*****************************************************************\n");
+
+        dialogOutS3;
+        dialogOutSlowS;
+        dialogOutS2;
+        dialogS.clear();
+        dialogS2.clear();
+
+        pressEnter();
+        dialogS3.push_back
+        ("After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n");
+        dialogS3.push_back("\n*****************************************************************\n");
+
+        money-=10;//
+                    moneycheckS;
+                    for (char c : "\nYour coins: ") {
+                        cout << c;
+                        this_thread::sleep_for(chrono::milliseconds(50));
+                    }
+                        cout << money;//
+                    
+                    for (char c : "\n") {
+                        cout << c;
+                        this_thread::sleep_for(chrono::milliseconds(50));
+                    }
+
+                    pressEnter();
+                    
+                    
+            
+
+
+        
+        money=2;
         if(money >= 20){ // ถ้าเงินมากกว่าหรือเท่ากับ 20 จะมี 2 ตัวเลือก
-            cout << "-----------------------------------------------------------------\n";
-            cout << "Will you accept the offer?\n\n";
-            cout << "1) Accept\n\n2) Decline\n";
-            cout << "-----------------------------------------------------------------\n";
-            cout << "Your Choice: ";
+            system("cls");
+
+            dialogS3.push_back("-----------------------------------------------------------------\n");
+            dialogS3.push_back("Will you accept the offer?\n");
+            dialogS3.push_back("1) Accept.\n2) Decline.\n");
+            dialogS3.push_back("-----------------------------------------------------------------\n");
+            dialogOutS3;
+            dialogOutS2;
+            
+            do
+            {
+            
+            cout<<"Your Choice: ";
             cin >> answer;
+            if (answer != 1 && answer != 2)
+            {
+                cout << "Wrong answer, Try again.\n";
+                continue;
+            }
+            break;
+            } while (true);
+            dialogS3.clear();
             if(answer == 1){ // ถ้า accept เงิน-20 hp +1
                 system("cls");
                 money -= 20;
                 moneycheckS;
-                hp += 1;
-                cout << "*****************************************************************\n";
-                cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
-                cout << "You accept to rest in a tavern. Your coin -20. The\nroom is so comfortable, so you sleep very well. In the \nnext morning, you wake up freshly and ready to go on.\n";
+                hp += 1;//
+                pressEnter();
+                dialogS2.clear();
+                dialogS3.push_back("*****************************************************************\n");
+                dialogS.push_back("After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n");
+                dialogS2.push_back("*****************************************************************\n");
+
+                dialogOutS3;
+                dialogOutSlowS;
+                dialogOutS2;
+                dialogS.clear();
+                pressEnter();
+                dialogS3.push_back("After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n");
+
+                dialogS.push_back("You accept to rest in a tavern. Your coin -20. The\nroom is so comfortable, so you sleep very well. In the \nnext morning, you wake up freshly and ready to go on.\n");
+                
+                dialogOutS3;
+                dialogOutSlowS;
+                dialogOutS2;
+                dialogS.clear();
+                pressEnter();
+                cout<<"\n*****************************************************************\n";
                 cout << "\nYour coins: " << money << "(-20)\n";
                 if(hp < maxhp) cout << "Your HP: " << hp << "(+1)\n";
                 cout << "\nYou continue the journey.\n";
@@ -432,28 +518,79 @@ void Tavern(int &money, int &hp, int &maxhp){ // เจอโรงเตี๊�
                 hpcheckS;
                 break;
             }else if(answer == 2){ // ถ้า decline พักใต้ต้นไม้แล้วเดินทางต่อ
-                system("cls");
-                cout << "*****************************************************************\n";
-                cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
-                cout << "You decline to rest in a tavern. So you walk all night and sleep under the tree that is not quite comfy.\n";
-                cout << "\nYou continue the journey in the morning.\n";
-                cout << "\n*****************************************************************\n";
+                pressEnter();
+                dialogS3.push_back("*****************************************************************\n");
+                dialogS.push_back("After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n");
+                dialogS2.push_back("*****************************************************************\n");
+
+                dialogOutS3;
+                dialogOutSlowS;
+                dialogOutS2;
+                dialogS.clear();
+                pressEnter();
+
+                dialogS3.push_back("After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n");
+
+                dialogS.push_back("You decline to rest in a tavern. So you walk all night and sleep under the tree that is not quite comfy.\n");
+                
+                dialogOutS3;
+                dialogOutSlowS;
+                dialogOutS2;
+                dialogS.clear();
+                pressEnter();
+                
+                dialogS3.push_back("You decline to rest in a tavern. So you walk all night and sleep under the tree that is not quite comfy.\n");
+                dialogS.push_back("\nYou continue the journey in the morning.\n");
+
+                dialogOutS3;
+                dialogOutSlowS;
+                dialogOutS2;
+                dialogS.clear();
+                
                 break;
             }
         }else{ // ถ้าเงินน้อยกว่า 20 จะมี 1 ตัวเลือก
-            cout << "-----------------------------------------------------------------\n";
-            cout << "Will you accept the offer?\n\n";
-            cout << "1) Decline\n";
-            cout << "-----------------------------------------------------------------\n";
-            cout << "Your Choice: ";
+            system("cls");
+            dialogS3.push_back("-----------------------------------------------------------------\n");
+            dialogS3.push_back("Will you accept the offer?\n");
+            dialogS3.push_back("1) Decline\n");
+            dialogS2.push_back("-----------------------------------------------------------------\n");
+            dialogOutS3;
+            dialogOutS2;
+            do
+            {
+            
+            cout<<"Your Choice: ";
             cin >> answer;
+            if (answer != 1 && answer != 2)
+            {
+                cout << "Wrong answer, Try again.\n";
+                continue;
+            }
+            break;
+            } while (true);
+            dialogS3.clear();
             if(answer == 1){ // บังคับ decline เพราะเงินไม่พอ
-                system("cls");
-                cout << "*****************************************************************\n";
-                cout << "After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n";
-                cout << "You don't have enough coins to rent a room,\nso you decline to rest in a tavern. You walk all night\nand sleep under the tree that is not quite comfy.\n";
-                cout << "\nYou continue the journey in the morning.\n";
-                cout << "\n*****************************************************************\n";
+                pressEnter();
+                dialogS3.push_back("*****************************************************************\n");
+                dialogS.push_back("After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n");
+                dialogS2.push_back("*****************************************************************\n");
+
+                dialogOutS3;
+                dialogOutSlowS;
+                dialogOutS2;
+                dialogS.clear();
+                pressEnter();
+
+                dialogS3.push_back("After traveling for a while, the sun begin to set, then you\nfound a tavern. You are tired from the journey, so you decide to get\nin there then tavern's owner come and welcome you. You ask the him\nif you want to stay here for a night. The owner offer to let you\nstay for 20 coins.\n\n");
+
+                dialogS.push_back("\nYou continue the journey in the morning.\n");
+
+                dialogOutS3;
+                dialogOutSlowS;
+                dialogOutS2;
+                dialogS.clear();
+                
                 break;
             }
         }
@@ -536,4 +673,9 @@ void FoundWoman(int &hp){ // เจอหญิงสาวขอความช
     }
     cin.ignore();
     pressEnter();
+}
+
+int main(){
+    int money,hp,maxhp;
+    Tavern(money, hp, maxhp);
 }
