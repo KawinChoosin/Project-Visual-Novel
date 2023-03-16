@@ -50,15 +50,15 @@ void Amt(int &hp, int &money, bool &amethyst)
     while (true){
         system("cls");
         dialogAmt2.push_back("*****************************************************************\n");
-        dialogAmt.push_back("\n    At that time, you traveled to the cold areas, with strong\nwinds, temperatures dropped And seems like a snowstorm is closer\nIf you walked, you may be in danger\nfrom the storm.\n");
+        dialogAmt.push_back("\n    At that time, you travel to the cold areas, with strong\nwinds, temperatures dropped. It seems like a snowstorm is closer.\nIf you walked, you may be in danger\nfrom the storm.\n");
         dialogAmt3.push_back("\n*****************************************************************\n");
         dialogOutAmt2;
         dialogOutSlowAmt;
         dialogOutAmt3;
         pressEnterAmt();
-        dialogAmt2.push_back("\n    At that time, you traveled to the cold areas, with strong\nwinds, temperatures dropped And seems like a snowstorm is closer\nIf you walked, you may be in danger\nfrom the storm.\n");
+        dialogAmt2.push_back("\n    At that time, you travel to the cold areas, with strong\nwinds, temperatures dropped. It seems like a snowstorm is closer.\nIf you walked, you may be in danger\nfrom the storm.\n");
         dialogAmt.clear();
-        dialogAmt.push_back("\n    But you are very lucky to meet a old cottage. That seems to\nbe no one. Will you come in?\n");
+        dialogAmt.push_back("\n    But you are very lucky to meet a old cottage that seems to\nbe no one lives. Will you come in?\n");
         dialogAmt3.push_back("-------------------------------------------------------------------\n");
         dialogAmt3.push_back("Will you come in?\n");
         dialogAmt3.push_back("1) Yes.\n");
@@ -68,7 +68,7 @@ void Amt(int &hp, int &money, bool &amethyst)
         dialogOutSlowAmt;
         dialogOutAmt3;
         dialogAmt.clear();
-        dialogAmt2.push_back("\n    But you are very lucky to meet a old cottage. That seems to\nbe no one. Will you come in?\n");
+        dialogAmt2.push_back("\n    But you are very lucky to meet a old cottage that seems to\nbe no one lives. Will you come in?\n");
         dialogAmt3.erase(dialogAmt3.begin() + 1, dialogAmt3.end());
         do
         {
@@ -83,27 +83,27 @@ void Amt(int &hp, int &money, bool &amethyst)
         } while (true);
         system("cls"); 
         if (answer == 1){
-            dialogAmt.push_back("\n    You decided to enter the hut. This hut looks very deserted.\nLike nobody has been around for many years But there is a fireplace\nAnd then you lit the fireplace. And resting \n");
+            dialogAmt.push_back("\n    You decided to enter the hut. This hut looks very deserted\nlike nobody has been around for many years. There is a fireplace.\nSo you lit the fireplace and resting.\n");
             dialogOutAmt2;
             dialogOutSlowAmt;
             dialogOutAmt3;
             dialogAmt.clear();
-            dialogAmt2.push_back("\n    You decided to enter the hut. This hut looks very deserted.\nLike nobody has been around for many years But there is a fireplace\nAnd then you lit the fireplace. And resting \n");
+            dialogAmt2.push_back("\n    You decided to enter the hut. This hut looks very deserted\nlike nobody has been around for many years. There is a fireplace.\nSo you lit the fireplace and resting.\n");
              
             pressEnterAmt();
-            dialogAmt.push_back("\n    But in the middle of that night You feel certain energy. But\ncannot see clearly It's just a black shadow.\nHurry at you And you have fallen\n");
+            dialogAmt.push_back("\n    But in the middle of that night, you feel certain energy but\ncannot see clearly. It's just a black shadow.\n");
             dialogOutAmt2;
             dialogOutSlowAmt;
             dialogOutAmt3;
             dialogAmt.clear();
-            dialogAmt2.push_back("\n    But in the middle of that night You feel certain energy. But\ncannot see clearly It's just a black shadow.\nHurry at you And you have fallen\n");
+            dialogAmt2.push_back("\n    But in the middle of that night, you feel certain energy but\ncannot see clearly. It's just a black shadow.\n");
              
             pressEnterAmt();
-            dialogAmt.push_back("\n    When waking up early The storm has calmed down. Even though\nyou sleep all night, you don't feel refreshed at all.\nAnd felt that there was no energy Your energy is continuously\ndown in a way that has never been before. \n");
+            dialogAmt.push_back("\n    When waking up early, the storm has calmed down. Even though\nyou sleep all night, you don't feel refreshed at all\nand feel that there is no energy. Your energy is continuously\ndown in a way that has never been before. \n");
             dialogOutAmt2;
             dialogOutSlowAmt;
             dialogAmt.clear();
-            dialogAmt2.push_back("\n    When waking up early The storm has calmed down. Even though\nyou sleep all night, you don't feel refreshed at all.\nAnd felt that there was no energy Your energy is continuously\ndown in a way that has never been before. \n");
+            dialogAmt2.push_back("\n    When waking up early, the storm has calmed down. Even though\nyou sleep all night, you don't feel refreshed at all\nand feel that there is no energy. Your energy is continuously\ndown in a way that has never been before. \n");
             hp -= 1;
             cout << "-------------------------------------------------------------------\n";
             cout << "You lose 1 hp.\nYour hp: " << hp << "  (-1)\n";
@@ -117,7 +117,7 @@ void Amt(int &hp, int &money, bool &amethyst)
 
             dialogAmt2.push_back("*****************************************************************\n");
             dialogAmt.push_back(
-                "\n   So you traveled through the snow that had fallen last night.\nAnd found in the city that is located in the midst of a large and\ntall mountains, which is covered with snow throughout the year,\nthere is peace and cold weather and people are friendly.\n");
+                "\n    So you travel through the snow that had fallen last night.\nYou find the city that is located in the midst of a large and\ntall mountains, which is covered with snow throughout the year,\nthere is peace and cold weather and people are friendly.\n");
             dialogAmt3.push_back("\n*****************************************************************\n");
             dialogOutAmt2;
             dialogOutSlowAmt;
@@ -126,15 +126,15 @@ void Amt(int &hp, int &money, bool &amethyst)
              
             pressEnterAmt();
             dialogAmt2.push_back(
-                "\n   So you traveled through the snow that had fallen last night.\nAnd found in the city that is located in the midst of a large and\ntall mountains, which is covered with snow throughout the year,\nthere is peace and cold weather and people are friendly.\n");
-            dialogAmt.push_back("\n   This city is full of people who are walking. There are many shops.\nAlthough last night there will be snow falling But people still live\nlike nothing You who feel tired. Where are you going?\n");
+                "\n    So you travel through the snow that had fallen last night.\nYou find the city that is located in the midst of a large and\ntall mountains, which is covered with snow throughout the year,\nthere is peace and cold weather and people are friendly.\n");
+            dialogAmt.push_back("\n    This city is full of people walking around. There are many shops.\nAlthough last night there will be snow falling, people still live\nlike nothing happened. You who feel tired, where are you going?\n");
             dialogOutAmt2;
             dialogOutSlowAmt;
             dialogOutAmt3;
             dialogAmt.clear();
              
             pressEnterAmt();
-            dialogAmt2.push_back("\n   This city is full of people who are walking. There are many shops.\nAlthough last night there will be snow falling But people still live\nlike nothing You who feel tired. Where are you going?\n");
+            dialogAmt2.push_back("\n    This city is full of people walking around. There are many shops.\nAlthough last night there will be snow falling, people still live\nlike nothing happened. You who feel tired where are you going?\n");
             dialogAmt3.push_back("===================================================================\n");
             dialogAmt3.push_back("Where are you going? \n");
             dialogAmt3.push_back("1) Tea shop at the corner of the road. \n");
@@ -181,13 +181,13 @@ void Amt(int &hp, int &money, bool &amethyst)
             dialogAmt.clear();
              
             pressEnterAmt();
-            dialogAmt2.push_back("\n   You decided not to enter the hut. And keep going to another\nkingdom. \n");
-            dialogAmt.push_back("\n   You have met with a snow storm. Even to hide under a tree ,\nBut was unable to endure the cold, so he was unconscious.\n");
+            dialogAmt2.push_back("\n    You decided not to enter the hut. And keep going to another\nkingdom. \n");
+            dialogAmt.push_back("\n    You have met with a snow storm. Even though you hide under a tree ,\nit is unable to endure the cold. So he is unconscious.\n");
             dialogOutAmt2;
             dialogOutSlowAmt;
             dialogOutAmt3;
             dialogAmt.clear();
-            dialogAmt2.push_back("\n   You have met with a snow storm. Even to hide under a tree ,\nBut was unable to endure the cold, so he was unconscious.\n");
+            dialogAmt2.push_back("\n    You have met with a snow storm. Even though you hide under a tree ,\nit is unable to endure the cold. So he is unconscious.\n");
             dialogOutAmt2;
             hp -= 2;
             cout << "-----------------------------------------\n";
@@ -196,7 +196,7 @@ void Amt(int &hp, int &money, bool &amethyst)
             dialogOutAmt3;
              
             pressEnterAmt();
-            dialogAmt.push_back("\n   Fortunately, the villagers walked past, so he took you into\nShangri-La, located in the midst of a large mountain at the top of\nthe snow throughout the year,\npeaceful, cool and friendly people.\n");
+            dialogAmt.push_back("\n    Fortunately, the villagers walk pass, he take you into\nShangri-La which located in the midst of a large mountain at the top of\nthe snow throughout the year,\npeaceful, cool and friendly people.\n");
             dialogOutAmt2;
             cout << "-----------------------------------------\n";
             cout << "You lose 2 hp.\nYour hp: " << hp << "  (-2)\n";
@@ -238,24 +238,24 @@ void hospital(int &hp, int &money){
     dialogAmt2.push_back("===================================================================\n");
     dialogAmt2.push_back("*****************************************************************\n");
 
-    dialogAmt.push_back("\n   In the hospital, there are only a few patients, 1 doctor\nand 3 nurses, you have been waiting in line to receive treatment.\n Next to the injured person from a bad bear.\n");
+    dialogAmt.push_back("\n    In the hospital, there are only a few patients, 1 doctor\nand 3 nurses, you have been waiting in line to receive treatment.\n Next to you, there is a patient who got injured from a bad bear.\n");
     dialogAmt3.push_back("\n*****************************************************************\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
     dialogAmt.clear();
-    dialogAmt2.push_back("\n   In the hospital, there are only a few patients, 1 doctor\nand 3 nurses, you have been waiting in line to receive treatment.\n Next to the injured person from a bad bear.\n");
+    dialogAmt2.push_back("\n    In the hospital, there are only a few patients, 1 doctor\nand 3 nurses, you have been waiting in line to receive treatment.\n Next to you, there is a patient who got injured from a bad bear.\n");
      
     pressEnterAmt();
-    dialogAmt.push_back("\n   And the other was slippery from skiing until the ankle\nWhen they gradually go to treat Until your queue.\n");
+    dialogAmt.push_back("\n    Some are slippery from skiing or even have an ankle.\nWhen they gradually go to treat, it is your queue.\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
     dialogAmt.clear();
      
     pressEnterAmt();
-    dialogAmt2.push_back("\n   And the other was slippery from skiing until the ankle\nWhen they gradually go to treat Until your queue.\n");
-    dialogAmt.push_back("\n   The doctor told you that your body is normal, everything\nis nothing wrong. You should sleep a lot.\n");
+    dialogAmt2.push_back("\n    Some are slippery from skiing or even have an ankle.\nWhen they gradually go to treat, it is your queue.\n");
+    dialogAmt.push_back("\n    The doctor told you that your body is normal, everything\nis fine. You should get a lot of sleep.\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
@@ -263,7 +263,7 @@ void hospital(int &hp, int &money){
      
     pressEnterAmt();
     money -= 15;
-    dialogAmt2.push_back("\n   The doctor told you that your body is normal, everything\nis nothing wrong. You should sleep a lot.\n");
+    dialogAmt2.push_back("\n    The doctor told you that your body is normal, everything\nis fine. You should get a lot of sleep.\n");
     dialogOutAmt2;
     cout << "-----------------------------------------\n";
     cout << "You lose 15 coins \nYour coins: " << money << "  (-15)\n";
@@ -275,7 +275,7 @@ void hospital(int &hp, int &money){
     dialogAmt2.clear();
     dialogAmt3.clear();
     dialogAmt2.push_back("===================================================================\n");
-    dialogAmt.push_back("  You have paid medical expenses. So you came out of the hospital\nwith confusion. Where are you going to choose to go?\n");
+    dialogAmt.push_back("    You have paid medical expenses. So you came out of the hospital\nwith confusion. Where are you going to go next? Choose to go?\n");
     dialogAmt3.push_back("===================================================================\n");
     
     dialogOutAmt2;
@@ -284,7 +284,7 @@ void hospital(int &hp, int &money){
     dialogAmt.clear();
      
     pressEnterAmt();
-    dialogAmt2.push_back("  You have paid medical expenses. So you came out of the hospital\nwith confusion. Where are you going to choose to go?\n");
+    dialogAmt2.push_back("    You have paid medical expenses. So you came out of the hospital\nwith confusion. Where are you going to go next? Choose to go?\n");
     dialogAmt2.push_back("===================================================================\n");
     dialogAmt2.push_back("Where are you going? \n");
     dialogAmt2.push_back("1) Tea shop at the corner of the road. \n");
@@ -333,14 +333,14 @@ void largebreadshop(int &hp, int &money){
     dialogAmt2.push_back("             Large bread shop in the heart of the city\n");
     dialogAmt2.push_back("===================================================================\n");
     dialogAmt2.push_back("*****************************************************************\n");
-    dialogAmt.push_back("\n   This bread shop is a famous shop in this city that anyone has\nto eat. There are many types of bread. From the whole wheat bread,\ncroissant and many others In the shop there is a table to\nsit as well. With the fragrance of a new baked bread overwhelming\nthroughout the shop.\n");
+    dialogAmt.push_back("\n    This bread shop is a famous shop in this city that anyone has\nto eat. There are many types of bread including the whole wheat bread,\ncroissant and many others. In the shop there is a table to\nsit as well. With the fragrance of a new baked bread overwhelming\nthroughout the shop.\n");
     dialogAmt3.push_back("\n*****************************************************************\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
     dialogAmt.clear();
     pressEnterAmt();
-    dialogAmt2.push_back("\n   This bread shop is a famous shop in this city that anyone has\nto eat. There are many types of bread. From the whole wheat bread,\ncroissant and many others In the shop there is a table to\nsit as well. With the fragrance of a new baked bread overwhelming\nthroughout the shop.\n");
+    dialogAmt2.push_back("\n    This bread shop is a famous shop in this city that anyone has\nto eat. There are many types of bread including the whole wheat bread,\ncroissant and many others. In the shop there is a table to\nsit as well. With the fragrance of a new baked bread overwhelming\nthroughout the shop.\n");
     dialogAmt2.push_back("\n*****************************************************************\n");
     dialogAmt2.push_back("-------------------------------------------------------------------\n");
     dialogAmt2.push_back("What do you choose to order?\n");
@@ -378,7 +378,7 @@ void largebreadshop(int &hp, int &money){
         pressEnterAmt();
         dialogAmt2.clear();
         dialogAmt2.push_back("===================================================================\n");
-        dialogAmt.push_back("\n  When you swallow bread, a shadow in your body comes out of your\nmouth and makes you suffocate. You see the shadow rushing\ninto the bread oven.\n");
+        dialogAmt.push_back("\n    When you swallow bread, a shadow in your body comes out of your\nmouth and makes you suffocate. You see the shadow rushing\ninto the bread oven.\n");
         dialogAmt3.push_back("===================================================================\n");
         dialogOutAmt2;
         dialogOutSlowAmt;
@@ -387,10 +387,10 @@ void largebreadshop(int &hp, int &money){
         hp -= 1;
          
         pressEnterAmt();
-        dialogAmt2.push_back("\n  When you swallow bread, a shadow in your body comes out of your\nmouth and makes you suffocate. You see the shadow rushing\ninto the bread oven.\n");
+        dialogAmt2.push_back("\n    When you swallow bread, a shadow in your body comes out of your\nmouth and makes you suffocate. You see the shadow rushing\ninto the bread oven.\n");
         dialogOutAmt2;
         cout << "-------------------------------------------------------------------\n";
-        cout << "\'When the dark soul is out you lose 1 hp.\n";
+        cout << "\'When the dark soul is out you lose 1 hp.\'\n";
         cout << "-------------------------------------------------------------------\n";
         cout << "-------------------------------------------------------------------\n";
         cout << "You lose 1 hp.\nYour hp: " << hp << "  (-1)\n";
@@ -402,7 +402,7 @@ void largebreadshop(int &hp, int &money){
         dialogAmt3.clear();
         dialogAmt2.push_back("*****************************************************************\n");
         dialogAmt.push_back(
-            "\n   The old woman sitting near the table sees it. She told you\nthat luckily, you are still alive and see the shadow.\nThe soul of darkness follows people to absorb the energy\nof life so that they can survive.\n");
+            "\n    The old woman sitting near the table sees it. She told you\nthat luckily, you are still alive and see the shadow.\nThe soul of darkness follows people to absorb the energy\nof life so that they can survive.\n");
         dialogAmt3.push_back("\n*****************************************************************\n");
         dialogOutAmt2;
         dialogOutSlowAmt;
@@ -411,9 +411,9 @@ void largebreadshop(int &hp, int &money){
          
         pressEnterAmt();
         dialogAmt2.push_back(
-            "\n   The old woman sitting near the table sees it. She told you\nthat luckily, you are still alive and see the shadow.\nThe soul of darkness follows people to absorb the energy\nof life so that they can survive.\n");
+            "\n    The old woman sitting near the table sees it. She told you\nthat luckily, you are still alive and see the shadow.\nThe soul of darkness follows people to absorb the energy\nof life so that they can survive.\n");
         dialogAmt.push_back(
-            "\n   However, because of the speciality of this store, the dark souls\nthat work in the store will get energy from the stove,\nnot human energy\n");
+            "\n    However, because of the speciality of this store, the dark souls\nthat work in the store will get energy from the stove,\nnot human energy\n");
         dialogOutAmt2;
         dialogOutSlowAmt;
         dialogOutAmt3;
@@ -440,7 +440,7 @@ void thiscityisfull(int &hp, int &money){
     int answer;
     pressEnterAmt();
     dialogAmt2.push_back("*****************************************************************\n");
-    dialogAmt.push_back("\n   This city is full of people who are walking. There are many shops.\nAlthough last night there will be snow falling But people still live\nlike nothing You who feel tired. Where are you going?\n");
+    dialogAmt.push_back("\n    This city is full of people walking around. There are many shops.\nAlthough last night there will be snow falling But people still live\nlike nothing happened. You who feel tired, where are you going?\n");
     dialogAmt3.push_back("\n*****************************************************************\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
@@ -448,7 +448,7 @@ void thiscityisfull(int &hp, int &money){
     dialogAmt.clear();
      
     pressEnterAmt();
-    dialogAmt2.push_back("\n   This city is full of people who are walking. There are many shops.\nAlthough last night there will be snow falling But people still live\nlike nothing You who feel tired. Where are you going?\n");
+    dialogAmt2.push_back("\n    This city is full of people walking around. There are many shops.\nAlthough last night there will be snow falling, people still live\nlike nothing happened. You who feel tired, where are you going?\n");
     dialogAmt2.push_back("===================================================================\n");
     dialogAmt2.push_back("Where are you going? \n");
     dialogAmt2.push_back("1) Tea shop at the corner of the road. \n");
@@ -500,7 +500,7 @@ void teashop(int &hp){
     dialogAmt2.push_back("                Tea shop at the corner of the road\n");
     dialogAmt2.push_back("===================================================================\n");
     dialogAmt2.push_back("*****************************************************************\n");
-    dialogAmt.push_back("\n   This tea shop is very quiet. Like an abandoned shop Looks\n mysterious Full of strange aura While you are walking around\nthe shop There was an old man walking out.\n");
+    dialogAmt.push_back("\n    This tea shop is very quiet as an abandoned shop. It looks\n mysterious and full of strange aura. While you are walking around\nthe shop, there is an old man walking out.\n");
     dialogAmt3.push_back("\n*****************************************************************\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
@@ -508,9 +508,9 @@ void teashop(int &hp){
     dialogAmt.clear();
      
     pressEnterAmt();
-    dialogAmt2.push_back("\n   This tea shop is very quiet. Like an abandoned shop Looks\n mysterious Full of strange aura While you are walking around\nthe shop There was an old man walking out.\n");
+    dialogAmt2.push_back("\n    This tea shop is very quiet as an abandoned shop. It looks\n mysterious and full of strange aura. While you are walking around\nthe shop, there is an old man walking out.\n");
     dialogAmt.push_back(
-    "\n    He has a rather flooded shape, wearing old clothes, beard\nand white hair. Walked in slowly, explored\naround you And said that \"you are going to die from\nthe aura around you\"\n");
+    "\n    He has a rather flooded shape, wearing old clothes, beard\nand white hair. He walks in slowly, survey\naround you and said that \"You are going to die from\nthe aura around you.\".\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
@@ -518,9 +518,9 @@ void teashop(int &hp){
      
     pressEnterAmt();
     dialogAmt2.push_back(
-    "\n    He has a rather flooded shape, wearing old clothes, beard\nand white hair. Walked in slowly, explored\naround you And said that \"you are going to die from\nthe aura around you\"\n");
+    "\n    He has a rather flooded shape, wearing old clothes, beard\nand white hair. He walks in slowly, survey\naround you and said that \"You are going to die from\nthe aura around you.\".\n");
     dialogAmt.push_back(
-    "\n    The elders returned to the back of the shop. And come back\nwith 3 glasses of tea.\n");
+    "\n    The elder returns to the back of the shop and come back\nwith 3 glasses of tea.\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
@@ -528,9 +528,9 @@ void teashop(int &hp){
      
     pressEnterAmt();
     dialogAmt2.push_back(
-    "\n    The elders returned to the back of the shop. And come back\nwith 3 glasses of tea.\n");
+    "\n    The elder returns to the back of the shop and come back\nwith 3 glasses of tea.\n");
     dialogAmt.push_back(
-    "\n    The smell is quite terrible. The color looks scary. But from\nwhat he said You will decide whether to drink or not.\n");
+    "\n    The smell is quite terrible. The color looks scary. However, according from\nwhat he said, you will decide whether to drink or not.\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
@@ -538,7 +538,7 @@ void teashop(int &hp){
      
     pressEnterAmt();
     dialogAmt2.push_back(
-    "\n    The smell is quite terrible. The color looks scary. But from\nwhat he said You will decide whether to drink or not.\n");
+    "\n    The smell is quite terrible. The color looks scary. However, according from\nwhat he said, you will decide whether to drink or not.\n");
     dialogAmt2.push_back("\n*****************************************************************\n");
     dialogAmt2.push_back("-------------------------------------------------------------------\n");
     dialogAmt2.push_back("1) Drink.\n");
@@ -633,7 +633,7 @@ void teashop(int &hp){
 
 void thefirstglass(int &hp){
     dialogAmt2.push_back("*****************************************************************\n");
-    dialogAmt.push_back("\n  The first glass you drink ,you got a vomit in black. And\nthere is a black vapor coming out as well. This is a tea that\n pulls out the dark spirit. The elders who are waiting for the\nglass for keep it in a jar. He said that he would take it to\n the place where it should be.\n");
+    dialogAmt.push_back("\n  The first glass you drink ,you vomit and there is\na black vapor coming out as well. This is a tea that\n pulls out the dark spirit. The elder who are waiting store the\ndark soul in a jar. He said that he would take it to\n the place where it should be.\n");
     dialogAmt3.push_back("\n*****************************************************************\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
@@ -641,9 +641,9 @@ void thefirstglass(int &hp){
     dialogAmt.clear();
      
     pressEnterAmt();
-    dialogAmt2.push_back("\n  The first glass you drink ,you got a vomit in black. And\nthere is a black vapor coming out as well. This is a tea that\n pulls out the dark spirit. The elders who are waiting for the\nglass for keep it in a jar. He said that he would take it to\n the place where it should be.\n");
+    dialogAmt2.push_back("\n  The first glass you drink ,you vomit and there is\na black vapor coming out as well. This is a tea that\n pulls out the dark spirit. The elder who are waiting store the\ndark soul in a jar. He said that he would take it to\n the place where it should be.\n");
     dialogAmt.push_back(
-    "\n   The next glass is the treatment of wounds within your body.\nAnd the last glass is to increase your power.\n");
+    "\n   The next glass is to treat the wounds within your body.\nAnd the last glass is to increase your power.\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
     dialogOutAmt3;
@@ -651,7 +651,7 @@ void thefirstglass(int &hp){
      
     pressEnterAmt();
     dialogAmt2.push_back(
-    "\n   The next glass is the treatment of wounds within your body.\nAnd the last glass is to increase your power.\n");
+    "\n   The next glass is to treat the wounds within your body.\nAnd the last glass is to increase your power.\n");
     hp += 1;
     dialogOutAmt2;
     cout << "-------------------------------------------------------------------\n";
@@ -662,7 +662,7 @@ void thefirstglass(int &hp){
     pressEnterAmt(); 
   
     dialogAmt2.push_back("*****************************************************************\n");
-    dialogAmt.push_back("\n   The old people have seen that in the future you will be very\n difficult. Therefore gives you an Amethyst,\nthe \"Crystal of Purity\".\n");
+    dialogAmt.push_back("\n   The old man have seen that in the future you will face\ndifficulties. Therefore, he gives you an Amethyst,\nthe \"Crystal of Purity\".\n");
     dialogAmt3.push_back("\n*****************************************************************\n");
     dialogOutAmt2;
     dialogOutSlowAmt;
@@ -671,7 +671,7 @@ void thefirstglass(int &hp){
     dialogAmt3.clear();
      
     pressEnterAmt();
-    dialogAmt2.push_back("\n   The old people have seen that in the future you will be very\n difficult. Therefore gives you an Amethyst,\nthe \"Crystal of Purity\".\n");
+    dialogAmt2.push_back("\n   The old man have seen that in the future you will face\ndifficulties. Therefore, he gives you an Amethyst,\nthe \"Crystal of Purity\".\n");
     dialogAmt2.push_back("===================================================================\n");
     dialogAmt.push_back("\nAmethyst is a powerful negative-energy cleansing properties. It\nalso provides comfort and protection during times of healing.\n");
     dialogAmt3.push_back("===================================================================\n");
