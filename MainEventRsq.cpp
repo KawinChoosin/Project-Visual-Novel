@@ -34,17 +34,17 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
     while(true){
         system("cls");
         dialogRsq3.push_back("*****************************************************************\n");
-        dialogRsq.push_back("    You have traveled until you arrive at the city of Avalon. It is \nsurrounded by trees, meadows, houses, lush green fields and wide fields\nas far as the eye can see.When you enter the city center, you will find\nMark Clay\'s ceramic shop. He is a very famous ceramicist. His work is\nknown for its beauty, unique, high quality and great value which is\nsuitable for gifts, souvenirs.\n");
+        dialogRsq.push_back("    You have travelled until you arrive at the city of Avalon. It is \nsurrounded by trees, meadows, houses, lush green fields and wide fields\nas far as the eye can see.When you enter the city center, you will find\nMark Clay\'s ceramic shop. He is a very famous ceramicist. His work is\nknown for its beauty, unique, high quality and great value which is\nsuitable for gifts, souvenirs.\n");
         dialogRsq2.push_back("\n*****************************************************************\n");
         dialogOut3;
         dialogOutSlowRsq;
         dialogOut2;
-        dialogRsq3.push_back("    You have traveled until you arrive at the city of Avalon. It is \nsurrounded by trees, meadows, houses, lush green fields and wide fields\nas far as the eye can see.When you enter the city center, you will find\nMark Clay\'s ceramic shop. He is a very famous ceramicist. His work is\nknown for its beauty, unique, high quality and great value which is\nsuitable for gifts, souvenirs.\n");
+        dialogRsq3.push_back("    You have travelled until you arrive at the city of Avalon. It is \nsurrounded by trees, meadows, houses, lush green fields and wide fields\nas far as the eye can see.When you enter the city center, you will find\nMark Clay\'s ceramic shop. He is a very famous ceramicist. His work is\nknown for its beauty, unique, high quality and great value which is\nsuitable for gifts, souvenirs.\n");
         dialogRsq.clear();
         pressEnterRsq();
         dialogRsq.push_back("\n    However, to own each piece of work is not easy because he will\nsell only to the one he wants to sell. It\'s not that the customer\nchooses him but he is the one who chooses the customers.\nYou see that the vase in the shop is very beautiful.\nWhen you ask the store owner to buy a vase, he asks you a question.\n");
         dialogRsq2.push_back("-----------------------------------------------------------------\n");
-        dialogRsq2.push_back("Who is the one you love the most?");
+        dialogRsq2.push_back("Who is the one you love the most? (Only 1 word)");
         dialogRsq2.push_back("\n-----------------------------------------------------------------\n");
         dialogRsq2.push_back("Your Answer: ");
         dialogOut3;
@@ -55,7 +55,7 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
         system("cls");
         dialogRsq.clear();
         dialogRsq2.erase(dialogRsq2.begin() + 2, dialogRsq2.begin() + 3);
-        dialogRsq2.insert(dialogRsq2.begin() + 2,"What is the thing you love the most?");
+        dialogRsq2.insert(dialogRsq2.begin() + 2,"What is the thing you love the most? (Only 1 word)");
         dialogOut3;
         dialogOutSlowRsq;
         dialogOut2;
@@ -79,7 +79,7 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
                         cout << c;
                         this_thread::sleep_for(chrono::milliseconds(50));
                     }
-        for (char c : " to be broken that it couldn't be repaired, it was no\n longer available for sale, and it couldn't be reworked.\nWill you forgive him/her?\".\n") {
+        for (char c : " to be broken that it couldn't be repaired, it was no\n longer available for sale, and it couldn't be reworked. Will you forgive him/her?\".\n") {
                         cout << c;
                         this_thread::sleep_for(chrono::milliseconds(50));
                     }
@@ -97,14 +97,14 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
         dialogRsq2.erase(dialogRsq2.begin() + 1, dialogRsq2.end());
         system("cls");
         if(answer==1){
-            dialogRsq.push_back("\n    You chose to forgive your lover. You showed the ceramicist\na kind of forgivable love. He was really impressed by you.\n");
+            dialogRsq.push_back("\n    You choose to forgive your lover. You show the ceramicist\na kind of forgivable love. He is really impressed by you.\n");
             dialogOut3;
             dialogOutSlowRsq;
             dialogOut2;
-            dialogRsq3.push_back("\n    You chose to forgive your lover. You showed the ceramicist\na kind of forgivable love. He was really impressed by you.\n");
+            dialogRsq3.push_back("\n    You choose to forgive your lover. You show the ceramicist\na kind of forgivable love. He is really impressed by you.\n");
             pressEnterRsq();
             dialogRsq.clear();
-            dialogRsq.push_back("\nHe gives you that vase and Rose Quartz, the \"Crystal of  Forgiveness and Love\".\n\n");
+            dialogRsq.push_back("\n    He gives you that vase and Rose Quartz, the \"Crystal of  Forgiveness and Love\".\n\n");
             rosequartz = true;
             dialogOut3;
             dialogOutSlowRsq;
@@ -119,7 +119,7 @@ void Rsq(int &hp, int &money, bool &rosequartz, bool &vase){
             
         }else if(answer==2){
             dialogRsq.push_back
-            ("\n    He was quite disappointed. He also did not sell you a \nvase, and you have to pay the entrance fee. So you left\nthe store dejected.\n");
+            ("\n    He is quite disappointed. He also don't sell you a \nvase, and you have to pay the entrance fee. So you leave\nthe store dejected.\n");
             money-=15;
             dialogOut3;
             dialogOutSlowRsq;

@@ -56,7 +56,7 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
     while(true){
         system("cls");
         dialogSdl3.push_back("*****************************************************************\n");
-        dialogSdl.push_back("    In the twilight. The sun was about to set after a long \njourney. You passed by a town that looked quiet outside. No\n one was passing by at all. surrounded by large mountains and\nthere was only a dim torch light in front of the city gate. \n");
+        dialogSdl.push_back("    In the twilight, the sun is about to set after a long\njourney. You pass by a town that looked quiet outside. No\n one is passing by and surrounding by large mountains.\nThere is only a dim torch light in front of the city gate. \n");
         dialogSdl2.push_back("\n*****************************************************************\n");
         dialogSdl2.push_back("-----------------------------------------------------------------\n");
         dialogSdl2.push_back("Are you going in? ");
@@ -68,21 +68,21 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
         dialogOutSlowSdl;
         dialogOutSdl2;
         dialogSdl2.erase(dialogSdl2.begin() + 2, dialogSdl2.begin() + 5);
-        dialogSdl3.push_back("    In the twilight. The sun was about to set after a long\njourney. You passed by a town that looked quiet outside. No\n one was passing by at all. surrounded by large mountains and\nthere was only a dim torch light in front of the city gate.\n");
+        dialogSdl3.push_back("    In the twilight, the sun is about to set after a long\njourney. You pass by a town that looked quiet outside. No\n one is passing by and surrounding by large mountains.\nThere is only a dim torch light in front of the city gate.\n");
         cin>>answer;
         dialogSdl.clear();
         system("cls");
         if(answer==1){
             Ifgoin(hp, money, sodalite, vase);
         }else if(answer==2){
-            dialogSdl.push_back("\n    At that moment, an old man passing by says to you, Inside there\nis the item you are looking for, and after you leave.\n");
+            dialogSdl.push_back("\n    At that moment, an old man passing by says to you, \"Inside there\nis the item you are looking for...\".\n");
             dialogSdl2.insert(dialogSdl2.begin() + 2, "Will you go back in?\n");
             dialogSdl2.insert(dialogSdl2.begin() + 3,"1) Yes.\n");
             dialogSdl2.insert(dialogSdl2.begin() + 4,"2) No.\n");
             dialogOutSdl3;
             dialogOutSlowSdl;
             dialogOutSdl2;
-            dialogSdl3.push_back("\n    At that moment, an old man passing by says to you, Inside there\nis the item you are looking for, and after you leave.\n");
+            dialogSdl3.push_back("\n    At that moment, an old man passing by says to you, \"Inside there\nis the item you are looking for...\".\n");
             cin >> answer;
             dialogSdl.clear();
             if(answer == 2){
@@ -105,7 +105,7 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
         dialogSdl2.clear();
         dialogSdl3.erase(dialogSdl3.begin() + 1, dialogSdl3.end());
         dialogSdl2.push_back("\n*****************************************************************\n");
-            dialogSdl.push_back("    After work, everyone gradually left. But when you walk out,\nthere's no one to be found and all the lights in other stores go\n off. The manager has offered you to stay in the upstairs room of\nthe store. Will you accept the offer?\n");
+            dialogSdl.push_back("    After the auction, everyone gradually left. But when you walk out,\nthere's no one to be found and all the lights in other stores go\n off. The manager has offered you to stay in the upstairs room of\nthe store. Will you accept the offer?\n");
         dialogSdl2.push_back("-----------------------------------------------------------------\n");
         dialogSdl2.push_back("Will you accept the offer?\n");
         dialogSdl2.push_back("1) Yes.\n");
@@ -116,16 +116,16 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
         dialogOutSlowSdl;
         dialogOutSdl2;
         cin >> answer;
-        dialogSdl3.push_back("    After work, everyone gradually left. But when you walk out,\nthere's no one to be found and all the lights in other stores go\n off. The manager has offered you to stay in the upstairs room of\nthe store. Will you accept the offer?\n");
+        dialogSdl3.push_back("    After the auction, everyone gradually left. But when you walk out,\nthere's no one to be found and all the lights in other stores go\noff. The manager has offered you to stay in the upstairs room of\nthe store. Will you accept the offer?\n");
         dialogSdl.clear();
         dialogSdl2.erase(dialogSdl2.begin() + 1, dialogSdl2.end());
         system("cls");
         if(answer == 1){
-            dialogSdl.push_back("\n    You accept the offer and stay in a room on the second floor of\nthe tavern. The room is spacious and clean, with\ncomplete facilities and bed sheets.\n");
+            dialogSdl.push_back("\n    You accept the offer and stay in a room on the second floor of\nthe tavern. The room is spacious and clean, with complete\nfacilities and bed sheets.\n");
             dialogOutSdl3;
             dialogOutSlowSdl;
             dialogOutSdl2;
-            dialogSdl3.push_back("\n    You accept the offer and stay in a room on the second floor of\nthe tavern. The room is spacious and clean, with\ncomplete facilities and bed sheets.\n");
+            dialogSdl3.push_back("\n    You accept the offer and stay in a room on the second floor of\nthe tavern. The room is spacious and clean, with complete\nfacilities and bed sheets.\n");
             cin.ignore();
             pressEnterSdl();
             dialogOutSdl3;
@@ -155,17 +155,17 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
             hpcheckSdl;
             pressEnterSdl();
             cout<<"*****************************************************************\n";
-            for (char c : "    In the morning, when you wake up, you feel tired, lack of sleep,\n dark eyes and exhausted. Then you leave   the inn and go out the door.\n ") {
+            for (char c : "    In the morning, when you wake up, you feel tired, lack of sleep,\n dark eyes and exhausted. Then you leave the inn and go out the door.\n ") {
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
             }
             cout<<"\n*****************************************************************\n";
         }else if(answer==2){
-            dialogSdl.push_back("    The whole city is in the dark and the gate is closed. So you\ncan only lie in front of the gate\nuntil     the morning\n");
+            dialogSdl.push_back("\n    The whole city is in the dark and the gate is closed. So you\ncan only lie in front of the gate until the morning\n");
             dialogOutSdl3;
             dialogOutSlowSdl;
             dialogOutSdl2;
-            dialogSdl3.push_back("    The whole city is in the dark and the gate is closed. So you\ncan only lie in front of the gate\nuntil the morning\n");
+            dialogSdl3.push_back("\n    The whole city is in the dark and the gate is closed. So you\ncan only lie in front of the gate until the morning\n");
             cin.ignore();
             pressEnterSdl();
             dialogSdl.clear();
@@ -184,7 +184,7 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
             hpcheckSdl;
             pressEnterSdl();
             cout<<"*****************************************************************\n";
-            for (char c : "    In the morning, when you wake up, you feel tired, lack of sleep,\n dark eyes and exhausted. Then you leave   the inn and go out the door.\n ") {
+            for (char c : "    In the morning, when you wake up, you feel tired, lack of sleep,\n dark eyes and exhausted. Then you leave the inn and go out the door.\n ") {
                 cout << c;
                 this_thread::sleep_for(chrono::milliseconds(50));
             }
@@ -211,14 +211,14 @@ void Sdl(int &hp, int &money, bool &sodalite, bool &vase){
 
 void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
     int answer;
-    dialogSdl.push_back("\n    You have arrived in Valhalla. Each house is starting to\nlight up. Then people began to walk crowded. The atmosphere\nchanged quickly. You entered the inn and met a Valkyrie.\nHe was a very wealthy jeweler and owned the place.\nHe had organized an auction. There were many participants\neating and drinking happily.\n");
+    dialogSdl.push_back("\n    You have arrived in Valhalla. Each house is starting to\nlight up. Then people begin to walk crowded. The atmosphere\nchanged quickly. You enter the inn and meet a Valkyrie.\nHe is a very wealthy jeweler and owned the place.\nHe has organized an auction. There are many participants\neating and drinking happily.\n");
             dialogOutSdl3;
             dialogOutSlowSdl;
             dialogOutSdl2;
-            dialogSdl3.push_back("\n    You have arrived in Valhalla. Each house is starting to\nlight up. Then people began to walk crowded. The atmosphere\nchanged quickly. You entered the inn and met a Valkyrie.\nHe was a very wealthy jeweler and owned the place.\nHe had organized an auction. There were many participants\neating and drinking happily.\n");
+            dialogSdl3.push_back("\n    You have arrived in Valhalla. Each house is starting to\nlight up. Then people begin to walk crowded. The atmosphere\nchanged quickly. You enter the inn and meet a Valkyrie.\nHe is a very wealthy jeweler and owned the place.\nHe has organized an auction. There are many participants\neating and drinking happily.\n");
             pressEnterSdl();
             dialogSdl.clear();
-            dialogSdl.push_back("\n    There are many  beautiful jewels. some are common Some\nrare ones are continually being auctioned off. And in the\nend there is one last gem. One that was the highlight of the\ngem tonight. It might be the gem you are looking for.\n");
+            dialogSdl.push_back("\n    There are many  beautiful jewels. Some are common and some are\nrare ones. They are all continually being auctioned off. And in the\nend there is one last gem which is the highlight of the\ngem tonight. It might be the gem you are looking for.\n");
             dialogSdl2.insert(dialogSdl2.begin() + 2, "Will you try bidding?\n");
             dialogSdl2.insert(dialogSdl2.begin() + 3,"1) Yes.\n");
             dialogSdl2.insert(dialogSdl2.begin() + 4,"2) No.\n");
@@ -226,7 +226,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
             dialogOutSlowSdl;
             dialogOutSdl2;
             dialogSdl2.erase(dialogSdl2.begin() + 2, dialogSdl2.begin() + 5);
-            dialogSdl3.push_back("\n    There are many  beautiful jewels. some are common Some\nrare ones are continually being auctioned off. And in the\nend there is one last gem. One that was the highlight of the\ngem tonight. It might be the gem you are looking for.\n");
+            dialogSdl3.push_back("\n    There are many  beautiful jewels. Some are common and some are\nrare ones. They are all continually being auctioned off. And in the\nend there is one last gem which is the highlight of the\ngem tonight. It might be the gem you are looking for.\n");
             cin>>answer;
             dialogSdl.clear();
             system("cls");
@@ -238,7 +238,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                     dialogOutSdl2;
                     cin>>bidding;
                     if(bidding>money){
-                        dialogSdl2.insert(dialogSdl2.begin() + 4, "You dont have enough coin.\n\n");
+                        dialogSdl2.insert(dialogSdl2.begin() + 4, "You don't have enough coin.\n\n");
                         continue;
                     }else break;
                 }while(true);
@@ -248,23 +248,23 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                     dialogSdl2.erase(dialogSdl2.begin() + 1, dialogSdl2.end());
                     system("cls");
                     dialogSdl3.push_back("\n-----------------------------------------------------------------\n");
-                    dialogSdl.push_back("\n             Someone cut more money than you have\n");
+                    dialogSdl.push_back("\n             Some one cut more money than you have\n");
                     dialogSdl2.insert(dialogSdl2.begin(), "\n-----------------------------------------------------------------\n");
                     dialogOutSdl3;
                     dialogOutSlowSdl;
                     dialogOutSdl2;
                     dialogSdl.clear();
-                    dialogSdl3.push_back("\n             Someone cut more money than you have\n");
+                    dialogSdl3.push_back("\n             Some one cut more money than you have\n");
                     dialogSdl3.push_back("\n-----------------------------------------------------------------\n");
                     dialogSdl2.erase(dialogSdl2.begin(), dialogSdl2.begin() + 1);
                     cin.ignore();
                     pressEnterSdl();
                     if(vase == 1){
-                        dialogSdl.push_back("\n    Fortunately, You have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
+                        dialogSdl.push_back("\n    Fortunately, you have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
                         dialogOutSdl3;
                         dialogOutSlowSdl;
                         dialogOutSdl2;
-                        dialogSdl3.push_back("\n    Fortunately, You have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
+                        dialogSdl3.push_back("\n    Fortunately, you have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
                         pressEnterSdl();
                         dialogSdl.clear();
                         dialogSdl.push_back("\n    You win the bid this time.\n\n    You get a Sodalite, the \"Crystal of Logic\"\n\n");
@@ -295,8 +295,8 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                         dialogOutSdl2;
                         cin.ignore();
                     }else if(vase == 0){
-                        dialogSdl.push_back("\n    If that's not enough you won't get this crystal.\n");
-                        dialogSdl.push_back("\n    Unfortunately, you lost the bid this time. And the one who\ngot this Sodalite gem was the son of the nobleman of this city.\nIt seemed that she would really like this gem and wouldn't\nlet anyone but her own it anymore.\n");
+                        dialogSdl.push_back("\n    If that's not enough, you won't get this crystal.\n");
+                        dialogSdl.push_back("\n    Unfortunately, you lost the bid this time. And the one who\nget this Sodalite gem is the son of the nobleman of this city.\nIt seems that she would really like this gem and wouldn't\nlet anyone but her own it anymore.\n");
                         dialogOutSdl3;
                         dialogOutSlowSdl;
                         dialogOutSdl2;
@@ -341,7 +341,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                         dialogOutSdl2;
                         cin>>bidding;
                         if(bidding>money){
-                            dialogSdl2.insert(dialogSdl2.begin() + 4, "You dont have enough coin.\n\n");
+                            dialogSdl2.insert(dialogSdl2.begin() + 4, "You don't have enough coin.\n\n");
                             continue;
                         }else break;
                     }while(true);
@@ -351,23 +351,23 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                         dialogSdl2.erase(dialogSdl2.begin() + 1, dialogSdl2.end());
                         system("cls");
                         dialogSdl3.push_back("\n-----------------------------------------------------------------\n");
-                        dialogSdl.push_back("\n             Someone cut more money than you have\n");
+                        dialogSdl.push_back("\n             Some one cut more money than you have\n");
                         dialogSdl2.insert(dialogSdl2.begin(), "\n-----------------------------------------------------------------\n");
                         dialogOutSdl3;
                         dialogOutSlowSdl;
                         dialogOutSdl2;
                         dialogSdl.clear();
-                        dialogSdl3.push_back("\n             Someone cut more money than you have\n");
+                        dialogSdl3.push_back("\n             Some one cut more money than you have\n");
                         dialogSdl3.push_back("\n-----------------------------------------------------------------\n");
                         dialogSdl2.erase(dialogSdl2.begin(), dialogSdl2.begin() + 1);
                         cin.ignore();
                         pressEnterSdl();
                         if(vase == 1){
-                            dialogSdl.push_back("\n    Fortunately, You have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
+                            dialogSdl.push_back("\n    Fortunately, you have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
                             dialogOutSdl3;
                             dialogOutSlowSdl;
                             dialogOutSdl2;
-                            dialogSdl3.push_back("\n    Fortunately, You have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
+                            dialogSdl3.push_back("\n    Fortunately, you have got a Mark Clay\'s \nVase, use this one instead to win the bidding. \n");
                             pressEnterSdl();
                             dialogSdl.clear();
                             dialogSdl.push_back("\n    You win the bid this time.\n\n    You get a Sodalite, the \"Crystal of Logic\"\n\n");
@@ -398,7 +398,7 @@ void Ifgoin(int &hp, int &money, bool &sodalite, bool &vase){
                             dialogOutSdl2;
                             cin.ignore();
                         }else if(vase == 0){
-                            dialogSdl.push_back("\n    If that's not enough you won't get this crystal.\n");
+                            dialogSdl.push_back("\n    If that's not, enough you won't get this crystal.\n");
                             dialogSdl.push_back("\n    Unfortunately, you lost the bid this time. And the one who\ngot this Sodalite gem was the son of the nobleman of this city.\nIt seemed that she would really like this gem and wouldn't\nlet anyone but her own it anymore.\n");
                             dialogOutSdl3;
                             dialogOutSlowSdl;
