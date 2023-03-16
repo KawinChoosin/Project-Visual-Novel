@@ -27,7 +27,7 @@ pressEnter();\
 return 0;\
 } \
 
-bool aventurine, rosequartz, sodalite, fluorite, amethyst; // เช็คชนิดของคริสตัล
+bool aventurine, rosequartz, sodalite, fluorite, amethyst; // เช็คชนิดของคริสตัล 
 bool vase;
 int gems = 0; // จำนวนของหินที่เก็บได้แล้ว
 int money = 60; // ค่าเงิน

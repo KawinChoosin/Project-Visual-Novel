@@ -30,7 +30,7 @@ bool cut;
     pressEnterSdl();\
     break;\
     }\
-
+ 
 #define moneycheckSdl if(money<0){\
     money=0;\
     }\

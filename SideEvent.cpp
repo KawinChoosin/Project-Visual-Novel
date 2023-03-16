@@ -17,7 +17,7 @@ void FoundWoman(int &); // Function เจอหญิงสาว
     pressEnter();\
     break;\
     }\
-
+ 
 #define moneycheckS if(money<0){\
     money=0;\
     }\

@@ -22,7 +22,7 @@ string name,thing;
 vector<string> dialogRsq;
 vector<string> dialogRsq2;
 vector<string> dialogRsq3;
-
+ 
 void pressEnterRsq(){
     cout<<"Press Enter to continue...";
     cin.get();

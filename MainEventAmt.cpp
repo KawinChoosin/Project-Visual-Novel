@@ -81,7 +81,7 @@ void Amt(int &hp, int &money, bool &amethyst)
             }
             break;
         } while (true);
-        system("cls");
+        system("cls"); 
         if (answer == 1){
             dialogAmt.push_back("\n    You decided to enter the hut. This hut looks very deserted.\nLike nobody has been around for many years But there is a fireplace\nAnd then you lit the fireplace. And resting \n");
             dialogOutAmt2;

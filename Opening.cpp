@@ -25,7 +25,7 @@ void pressEnters(){ // กด Enter เปลี่ยนฉาก
     cout << "Press Enter to continue...";
     cin.get();
     system("cls");
-}
+} 
 
 void Opening(){ // ฉากเปิด
     system("cls");
