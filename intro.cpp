@@ -8,7 +8,7 @@
 using namespace std;
 
 void pressEntersintro(){ // กด Enter เปลี่ยนฉาก
-    cout << "                                  ...Press Enter to play...\n\n\n\n\n\n";
+    cout << "                                  ...Press Enter to play...\n\n\n\n";
     cin.get();
     system("cls");
 }
