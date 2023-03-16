@@ -14,6 +14,7 @@ void pressEntersintro(){ // กด Enter เปลี่ยนฉาก
 }
 
 void intro(){
+    system("cls");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, 11); // Set console output color to bright cyan
 
