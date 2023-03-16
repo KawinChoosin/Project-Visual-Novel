@@ -655,11 +655,11 @@ void thefirstglass(int &hp){
     hp += 1;
     dialogOutAmt2;
     cout << "-------------------------------------------------------------------\n";
-    cout << "\nYou lose 1 hp.\nYour hp: " << hp << "  (-1)\n";
+    cout << "\nYou got 1 hp.\nYour hp: " << hp << "  (+1)\n";
     cout << "-------------------------------------------------------------------\n";
     dialogOutAmt3;
      
-    pressEnterAmt();
+    pressEnterAmt(); 
   
     dialogAmt2.push_back("*****************************************************************\n");
     dialogAmt.push_back("\n   The old people have seen that in the future you will be very\n difficult. Therefore gives you an Amethyst,\nthe \"Crystal of Purity\".\n");
