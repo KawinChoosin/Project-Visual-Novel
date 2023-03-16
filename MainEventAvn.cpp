@@ -84,7 +84,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
-                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
+                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
@@ -130,7 +130,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
-                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
+                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
@@ -178,7 +178,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
-                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
+                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
@@ -223,7 +223,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                 dialogAvn.clear();
                 dialogAvn2.erase(dialogAvn2.begin() + 2, dialogAvn2.begin() + 4);
                 dialogAvn2.insert(dialogAvn2.begin() + 2, "Will you cross it?\n\n");
-                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes,I will.\n\n2) No,I won't.\n");
+                dialogAvn2.insert(dialogAvn2.begin() + 3, "1) Yes, I will.\n\n2) No, I won't.\n");
                 dialogOutAvn2;
                 cin >> answer;
                 if(answer == 1){
@@ -235,7 +235,7 @@ void Avn(int &hp, int &money, bool &aventurine){
                     dialogAvn2.push_back("\n*****************************************************************\n");
                     dialogAvn2.push_back("-----------------------------------------------------------------\n");
                     dialogAvn2.push_back("Will you pick it back to them?\n\n");
-                    dialogAvn2.push_back("1) Yes,I will.\n\n2) No,I won't.\n");
+                    dialogAvn2.push_back("1) Yes, I will.\n\n2) No, I won't.\n");
                     dialogAvn2.push_back("-----------------------------------------------------------------\n");
                     dialogAvn2.push_back("Your Choice: ");
                     dialogOutAvn3;
