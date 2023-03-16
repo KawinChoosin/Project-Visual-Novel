@@ -81,7 +81,7 @@ void Amt(int &hp, int &money, bool &amethyst)
             }
             break;
         } while (true);
-        system("cls");
+        system("cls"); 
         if (answer == 1){
             dialogAmt.push_back("\n    You decided to enter the hut. This hut looks very deserted.\nLike nobody has been around for many years But there is a fireplace\nAnd then you lit the fireplace. And resting \n");
             dialogOutAmt2;
@@ -171,8 +171,7 @@ void Amt(int &hp, int &money, bool &amethyst)
             }
             break;
         }
-        if (answer == 2)
-        {
+        if (answer == 2){
             dialogAmt2.push_back("*****************************************************************\n");
             dialogAmt.push_back("   You decided not to enter the hut. And keep going to another\nkingdom. \n");
             dialogAmt3.push_back("\n*****************************************************************\n");
@@ -656,11 +655,11 @@ void thefirstglass(int &hp){
     hp += 1;
     dialogOutAmt2;
     cout << "-------------------------------------------------------------------\n";
-    cout << "\nYou lose 1 hp.\nYour hp: " << hp << "  (-1)\n";
+    cout << "\nYou got 1 hp.\nYour hp: " << hp << "  (+1)\n";
     cout << "-------------------------------------------------------------------\n";
     dialogOutAmt3;
      
-    pressEnterAmt();
+    pressEnterAmt(); 
   
     dialogAmt2.push_back("*****************************************************************\n");
     dialogAmt.push_back("\n   The old people have seen that in the future you will be very\n difficult. Therefore gives you an Amethyst,\nthe \"Crystal of Purity\".\n");

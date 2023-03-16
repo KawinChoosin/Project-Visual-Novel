@@ -16,7 +16,7 @@ void pressEntersintro(){ // กด Enter เปลี่ยนฉาก
 void intro(){
     system("cls");
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(hConsole, 11); // Set console output color to bright cyan
+    SetConsoleTextAttribute(hConsole, 11); // Set console output color to bright cyan 
 
     // Print ASCII art
     std::cout << R"(

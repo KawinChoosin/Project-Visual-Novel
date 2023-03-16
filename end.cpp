@@ -15,7 +15,7 @@ using namespace std;
                         cout << c; \
                         this_thread::sleep_for(chrono::milliseconds(50)); \
                     } \
-                  } // #define ให้ cout dialog ออกมา.
+                  } // #define ให้ cout dialog ออกมา
 
 vector<string> dialogEnd;
 vector<string> dialogEnd2;
@@ -71,6 +71,7 @@ void End(bool &g1,bool &g2,bool &g3,bool &g4,bool &g5){
                 int y=countgem*15;
                 int x=rand()%100+1;
                 if(x<=y){
+                    pressEnterEnd();
                     dialogEnd.push_back("    His willpower and crystal power lead him to victory and bring peace to the kingdom.");
                     dialogOutSlowEnd;
                     dialogEnd.clear();  
@@ -88,7 +89,7 @@ void End(bool &g1,bool &g2,bool &g3,bool &g4,bool &g5){
                     system("cls");
                     break;
                 }else{
-                    dialogEnd.push_back("    Holy crap! My attack is missed. How can it be?\nAnd then, the dragon spits the flame from its mouth.\n ");
+                    dialogEnd.push_back("Holy crap! My attack is missed. How can it be?\nAnd then, the dragon spits the flame from its mouth.\n ");
                     if(y>=45 && i<1){
                         dialogEnd.push_back("    Because of the crystal's power, they make you survive \nthe dragon's flame and encounter attack.\n");
                         dialogOutSlowEnd;
@@ -106,7 +107,7 @@ void End(bool &g1,bool &g2,bool &g3,bool &g4,bool &g5){
                     }
 
                 }
-                
+                 
             }
         }
 

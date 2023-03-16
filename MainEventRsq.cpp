@@ -17,12 +17,12 @@ string name,thing;
                         cout << c; \
                         this_thread::sleep_for(chrono::milliseconds(50)); \
                     } \
-                  } // #define ให้ cout dialog ออกมา.
+                  } // #define ให้ cout dialog ออกมา
 
 vector<string> dialogRsq;
 vector<string> dialogRsq2;
 vector<string> dialogRsq3;
-
+ 
 void pressEnterRsq(){
     cout<<"Press Enter to continue...";
     cin.get();

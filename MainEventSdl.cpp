@@ -15,7 +15,7 @@ using namespace std;
                         cout << c; \
                         this_thread::sleep_for(chrono::milliseconds(50)); \
                     } \
-                  } // #define ให้ cout dialog ออกมา.
+                  } // #define ให้ cout dialog ออกมา
 
 vector<string> dialogSdl;
 vector<string> dialogSdl2;
@@ -30,7 +30,7 @@ bool cut;
     pressEnterSdl();\
     break;\
     }\
-
+ 
 #define moneycheckSdl if(money<0){\
     money=0;\
     }\
