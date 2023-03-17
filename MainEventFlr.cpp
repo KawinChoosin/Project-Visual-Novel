@@ -263,10 +263,4 @@ void Flr(int &hp, int &money, bool &fluorite){
     cout<<("*****************************************************************\n");
     pressEnterFlr();
 } 
-int main(){
-    int hp=8;
-    int money=20;
-    bool fluorite=1;
-    Flr(hp, money, fluorite);
 
-}
